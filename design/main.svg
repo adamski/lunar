@@ -1,0 +1,1756 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="2190.3486"
+   height="2575"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="main.svg">
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.175"
+     inkscape:cx="428.70405"
+     inkscape:cy="1169.7009"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1680"
+     inkscape:window-height="992"
+     inkscape:window-x="1920"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <sodipodi:guide
+       orientation="0,1"
+       position="3145.7143,1981.7857"
+       id="guide5128" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="2669.3281,1794.0309"
+       id="guide5132" />
+  </sodipodi:namedview>
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient5245">
+      <stop
+         style="stop-color:#333333;stop-opacity:1;"
+         offset="0"
+         id="stop5247" />
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="1"
+         id="stop5249" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient5237">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop5239" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop5241" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4073">
+      <stop
+         id="stop4075"
+         offset="0"
+         style="stop-color:#111723;stop-opacity:1;" />
+      <stop
+         id="stop4077"
+         offset="1"
+         style="stop-color:#000000;stop-opacity:1;" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4010">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop4018" />
+      <stop
+         id="stop4014"
+         offset="1"
+         style="stop-color:#242424;stop-opacity:1;" />
+    </linearGradient>
+    <clipPath
+       id="clipPath3904"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         transform="translate(-137.00948,-140.81698)"
+         d="m 852.56876,754.7207 a 280.82242,280.82242 0 1 1 -561.64484,0 280.82242,280.82242 0 1 1 561.64484,0 z"
+         sodipodi:ry="280.82242"
+         sodipodi:rx="280.82242"
+         sodipodi:cy="754.7207"
+         sodipodi:cx="571.74634"
+         id="path3906"
+         style="fill:#171717;fill-opacity:1;stroke:none"
+         sodipodi:type="arc" />
+    </clipPath>
+    <clipPath
+       id="clipPath3988"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         sodipodi:end="4.3633231"
+         sodipodi:start="1.5707963"
+         transform="matrix(0.97828118,0,0,0.95295349,248.93921,226.74854)"
+         d="M 331.33006,851.69534 A 299.00516,299.00516 0 0 1 229.06425,271.71725 l 102.2658,280.97294 z"
+         sodipodi:ry="299.00516"
+         sodipodi:rx="299.00516"
+         sodipodi:cy="552.69019"
+         sodipodi:cx="331.33005"
+         id="path3990"
+         style="fill:#999999;fill-opacity:1;stroke:none"
+         sodipodi:type="arc" />
+    </clipPath>
+    <linearGradient
+       gradientTransform="matrix(0.99405793,0,0,1,0.47051404,0)"
+       gradientUnits="userSpaceOnUse"
+       y2="978.59467"
+       x2="491.30536"
+       y1="1115.9644"
+       x1="491.30536"
+       id="linearGradient4016-0"
+       xlink:href="#linearGradient4010-1"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient4010-1">
+      <stop
+         style="stop-color:#131e33;stop-opacity:1;"
+         offset="0"
+         id="stop4018-2" />
+      <stop
+         id="stop4014-0"
+         offset="1"
+         style="stop-color:#242424;stop-opacity:1;" />
+    </linearGradient>
+    <linearGradient
+       gradientTransform="translate(0,4)"
+       gradientUnits="userSpaceOnUse"
+       y2="97.188156"
+       x2="531.5954"
+       y1="979.39526"
+       x1="531.5954"
+       id="linearGradient4079"
+       xlink:href="#linearGradient4073"
+       inkscape:collect="always" />
+    <clipPath
+       id="clipPath3904-6"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         transform="translate(-137.00948,-140.81698)"
+         d="m 852.56876,754.7207 a 280.82242,280.82242 0 1 1 -561.64484,0 280.82242,280.82242 0 1 1 561.64484,0 z"
+         sodipodi:ry="280.82242"
+         sodipodi:rx="280.82242"
+         sodipodi:cy="754.7207"
+         sodipodi:cx="571.74634"
+         id="path3906-0"
+         style="fill:#171717;fill-opacity:1;stroke:none"
+         sodipodi:type="arc" />
+    </clipPath>
+    <clipPath
+       id="clipPath3988-1"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         sodipodi:end="4.3633231"
+         sodipodi:start="1.5707963"
+         transform="matrix(0.97828118,0,0,0.95295349,248.93921,226.74854)"
+         d="M 331.33006,851.69534 A 299.00516,299.00516 0 0 1 229.06425,271.71725 l 102.2658,280.97294 z"
+         sodipodi:ry="299.00516"
+         sodipodi:rx="299.00516"
+         sodipodi:cy="552.69019"
+         sodipodi:cx="331.33005"
+         id="path3990-1"
+         style="fill:#999999;fill-opacity:1;stroke:none"
+         sodipodi:type="arc" />
+    </clipPath>
+    <linearGradient
+       gradientTransform="translate(985.58124,13.0763)"
+       gradientUnits="userSpaceOnUse"
+       y2="97.188156"
+       x2="531.5954"
+       y1="979.39526"
+       x1="531.5954"
+       id="linearGradient4079-2"
+       xlink:href="#linearGradient4073-0"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient4073-0">
+      <stop
+         id="stop4075-0"
+         offset="0"
+         style="stop-color:#111723;stop-opacity:1;" />
+      <stop
+         id="stop4077-3"
+         offset="1"
+         style="stop-color:#000000;stop-opacity:1;" />
+    </linearGradient>
+    <clipPath
+       id="clipPath3904-6-0"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         transform="translate(-137.00948,-140.81698)"
+         d="m 852.56876,754.7207 a 280.82242,280.82242 0 1 1 -561.64484,0 280.82242,280.82242 0 1 1 561.64484,0 z"
+         sodipodi:ry="280.82242"
+         sodipodi:rx="280.82242"
+         sodipodi:cy="754.7207"
+         sodipodi:cx="571.74634"
+         id="path3906-0-8"
+         style="fill:#171717;fill-opacity:1;stroke:none"
+         sodipodi:type="arc" />
+    </clipPath>
+    <clipPath
+       id="clipPath3988-1-1"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         sodipodi:end="4.3633231"
+         sodipodi:start="1.5707963"
+         transform="matrix(0.97828118,0,0,0.95295349,248.93921,226.74854)"
+         d="M 331.33006,851.69534 A 299.00516,299.00516 0 0 1 229.06425,271.71725 l 102.2658,280.97294 z"
+         sodipodi:ry="299.00516"
+         sodipodi:rx="299.00516"
+         sodipodi:cy="552.69019"
+         sodipodi:cx="331.33005"
+         id="path3990-1-2"
+         style="fill:#999999;fill-opacity:1;stroke:none"
+         sodipodi:type="arc" />
+    </clipPath>
+    <linearGradient
+       gradientTransform="translate(988.92024,1387.9698)"
+       gradientUnits="userSpaceOnUse"
+       y2="97.188156"
+       x2="531.5954"
+       y1="979.39526"
+       x1="531.5954"
+       id="linearGradient4079-2-3"
+       xlink:href="#linearGradient4073-0-5"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient4073-0-5">
+      <stop
+         id="stop4075-0-1"
+         offset="0"
+         style="stop-color:#111723;stop-opacity:1;" />
+      <stop
+         id="stop4077-3-3"
+         offset="1"
+         style="stop-color:#000000;stop-opacity:1;" />
+    </linearGradient>
+    <clipPath
+       id="clipPath3904-7"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         transform="translate(-137.00948,-140.81698)"
+         d="m 852.56876,754.7207 a 280.82242,280.82242 0 1 1 -561.64484,0 280.82242,280.82242 0 1 1 561.64484,0 z"
+         sodipodi:ry="280.82242"
+         sodipodi:rx="280.82242"
+         sodipodi:cy="754.7207"
+         sodipodi:cx="571.74634"
+         id="path3906-4"
+         style="fill:#171717;fill-opacity:1;stroke:none"
+         sodipodi:type="arc" />
+    </clipPath>
+    <clipPath
+       id="clipPath3988-5"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         sodipodi:end="4.3633231"
+         sodipodi:start="1.5707963"
+         transform="matrix(0.97828118,0,0,0.95295349,248.93921,226.74854)"
+         d="M 331.33006,851.69534 A 299.00516,299.00516 0 0 1 229.06425,271.71725 l 102.2658,280.97294 z"
+         sodipodi:ry="299.00516"
+         sodipodi:rx="299.00516"
+         sodipodi:cy="552.69019"
+         sodipodi:cx="331.33005"
+         id="path3990-9"
+         style="fill:#999999;fill-opacity:1;stroke:none"
+         sodipodi:type="arc" />
+    </clipPath>
+    <linearGradient
+       gradientTransform="translate(3.338938,1378.8935)"
+       gradientUnits="userSpaceOnUse"
+       y2="97.188156"
+       x2="531.5954"
+       y1="979.39526"
+       x1="531.5954"
+       id="linearGradient4079-4"
+       xlink:href="#linearGradient4073-8"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient4073-8">
+      <stop
+         id="stop4075-3"
+         offset="0"
+         style="stop-color:#111723;stop-opacity:1;" />
+      <stop
+         id="stop4077-7"
+         offset="1"
+         style="stop-color:#000000;stop-opacity:1;" />
+    </linearGradient>
+    <clipPath
+       id="clipPath3904-6-4"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         transform="translate(-137.00948,-140.81698)"
+         d="m 852.56876,754.7207 a 280.82242,280.82242 0 1 1 -561.64484,0 280.82242,280.82242 0 1 1 561.64484,0 z"
+         sodipodi:ry="280.82242"
+         sodipodi:rx="280.82242"
+         sodipodi:cy="754.7207"
+         sodipodi:cx="571.74634"
+         id="path3906-0-1"
+         style="fill:#171717;fill-opacity:1;stroke:none"
+         sodipodi:type="arc" />
+    </clipPath>
+    <clipPath
+       id="clipPath3988-1-4"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         sodipodi:end="4.3633231"
+         sodipodi:start="1.5707963"
+         transform="matrix(0.97828118,0,0,0.95295349,248.93921,226.74854)"
+         d="M 331.33006,851.69534 A 299.00516,299.00516 0 0 1 229.06425,271.71725 l 102.2658,280.97294 z"
+         sodipodi:ry="299.00516"
+         sodipodi:rx="299.00516"
+         sodipodi:cy="552.69019"
+         sodipodi:cx="331.33005"
+         id="path3990-1-20"
+         style="fill:#999999;fill-opacity:1;stroke:none"
+         sodipodi:type="arc" />
+    </clipPath>
+    <linearGradient
+       gradientTransform="translate(1958.7591,15.01531)"
+       gradientUnits="userSpaceOnUse"
+       y2="97.188156"
+       x2="531.5954"
+       y1="979.39526"
+       x1="531.5954"
+       id="linearGradient4079-2-0"
+       xlink:href="#linearGradient4073-0-3"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient4073-0-3">
+      <stop
+         id="stop4075-0-9"
+         offset="0"
+         style="stop-color:#111723;stop-opacity:1;" />
+      <stop
+         id="stop4077-3-8"
+         offset="1"
+         style="stop-color:#000000;stop-opacity:1;" />
+    </linearGradient>
+    <clipPath
+       id="clipPath3988-1-2"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         sodipodi:end="4.3633231"
+         sodipodi:start="1.5707963"
+         transform="matrix(0.97828118,0,0,0.95295349,248.93921,226.74854)"
+         d="M 331.33006,851.69534 A 299.00516,299.00516 0 0 1 229.06425,271.71725 l 102.2658,280.97294 z"
+         sodipodi:ry="299.00516"
+         sodipodi:rx="299.00516"
+         sodipodi:cy="552.69019"
+         sodipodi:cx="331.33005"
+         id="path3990-1-6"
+         style="fill:#999999;fill-opacity:1;stroke:none"
+         sodipodi:type="arc" />
+    </clipPath>
+    <clipPath
+       id="clipPath3904-6-4-7"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         transform="translate(-137.00948,-140.81698)"
+         d="m 852.56876,754.7207 a 280.82242,280.82242 0 1 1 -561.64484,0 280.82242,280.82242 0 1 1 561.64484,0 z"
+         sodipodi:ry="280.82242"
+         sodipodi:rx="280.82242"
+         sodipodi:cy="754.7207"
+         sodipodi:cx="571.74634"
+         id="path3906-0-1-5"
+         style="fill:#171717;fill-opacity:1;stroke:none"
+         sodipodi:type="arc" />
+    </clipPath>
+    <clipPath
+       id="clipPath3988-1-4-5"
+       clipPathUnits="userSpaceOnUse">
+      <path
+         sodipodi:end="4.3633231"
+         sodipodi:start="1.5707963"
+         transform="matrix(0.97828118,0,0,0.95295349,248.93921,226.74854)"
+         d="M 331.33006,851.69534 A 299.00516,299.00516 0 0 1 229.06425,271.71725 l 102.2658,280.97294 z"
+         sodipodi:ry="299.00516"
+         sodipodi:rx="299.00516"
+         sodipodi:cy="552.69019"
+         sodipodi:cx="331.33005"
+         id="path3990-1-20-1"
+         style="fill:#999999;fill-opacity:1;stroke:none"
+         sodipodi:type="arc" />
+    </clipPath>
+    <linearGradient
+       gradientTransform="translate(1957.0848,1384.2555)"
+       gradientUnits="userSpaceOnUse"
+       y2="97.188156"
+       x2="531.5954"
+       y1="979.39526"
+       x1="531.5954"
+       id="linearGradient4079-2-0-5"
+       xlink:href="#linearGradient4073-0-3-3"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient4073-0-3-3">
+      <stop
+         id="stop4075-0-9-8"
+         offset="0"
+         style="stop-color:#111723;stop-opacity:1;" />
+      <stop
+         id="stop4077-3-8-4"
+         offset="1"
+         style="stop-color:#000000;stop-opacity:1;" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4073-0-3-3"
+       id="linearGradient4897"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(1470.2325,1299.0001)"
+       x1="531.5954"
+       y1="979.39526"
+       x2="531.5954"
+       y2="97.188156" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4073-8"
+       id="linearGradient4919"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-7.03e-5,1298.9999)"
+       x1="531.5954"
+       y1="979.39526"
+       x2="531.5954"
+       y2="97.188156" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5237"
+       id="linearGradient5243"
+       x1="2682.0339"
+       y1="743.70367"
+       x2="2614.5337"
+       y2="865.13226"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5245"
+       id="linearGradient5251"
+       x1="2674.1768"
+       y1="770.8465"
+       x2="2535.9622"
+       y2="762.98938"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5245-8"
+       id="linearGradient5251-0"
+       x1="2674.1768"
+       y1="770.8465"
+       x2="2535.9622"
+       y2="762.98938"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       id="linearGradient5245-8">
+      <stop
+         style="stop-color:#333333;stop-opacity:1;"
+         offset="0"
+         id="stop5247-2" />
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="1"
+         id="stop5249-4" />
+    </linearGradient>
+    <linearGradient
+       y2="762.98938"
+       x2="2535.9622"
+       y1="770.8465"
+       x1="2674.1768"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient5272"
+       xlink:href="#linearGradient5245-8"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient5245-89">
+      <stop
+         style="stop-color:#333333;stop-opacity:1;"
+         offset="0"
+         id="stop5247-4" />
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="1"
+         id="stop5249-9" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5245-89"
+       id="linearGradient5449"
+       gradientUnits="userSpaceOnUse"
+       x1="2674.1768"
+       y1="770.8465"
+       x2="2535.9622"
+       y2="762.98938" />
+    <linearGradient
+       y2="762.98938"
+       x2="2535.9622"
+       y1="770.8465"
+       x1="2674.1768"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient5272-6"
+       xlink:href="#linearGradient5245-8-3"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient5245-8-3">
+      <stop
+         style="stop-color:#333333;stop-opacity:1;"
+         offset="0"
+         id="stop5247-2-9" />
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="1"
+         id="stop5249-4-8" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4073-0-5"
+       id="linearGradient5513"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(735.11613,1299)"
+       x1="531.5954"
+       y1="979.39526"
+       x2="531.5954"
+       y2="97.188156" />
+    <linearGradient
+       y2="762.98938"
+       x2="2535.9622"
+       y1="770.8465"
+       x1="2674.1768"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient5272-6-8"
+       xlink:href="#linearGradient5245-8-3-0"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient5245-8-3-0">
+      <stop
+         style="stop-color:#333333;stop-opacity:1;"
+         offset="0"
+         id="stop5247-2-9-9" />
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="1"
+         id="stop5249-4-8-6" />
+    </linearGradient>
+  </defs>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-77.026749,51.923531)"
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <g
+       id="g4836">
+      <image
+         y="-51.923531"
+         x="77.14286"
+         id="image3023"
+         xlink:href="file:///home/fx/Documents/Geekeries/Android/circles/design/empty.png"
+         height="1280"
+         width="720" />
+      <rect
+         style="fill:url(#linearGradient4079);fill-opacity:1;stroke:none"
+         id="rect3992-3"
+         width="716.9632"
+         height="884.89355"
+         x="77.026749"
+         y="98.492416" />
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         id="rect3992"
+         width="716.9632"
+         height="145.46196"
+         x="79.183472"
+         y="983.72113" />
+      <rect
+         style="fill:#1c1c1c;fill-opacity:1;stroke:none"
+         id="rect4020"
+         width="147.48227"
+         height="146.29881"
+         x="570.11761"
+         y="983.61951" />
+      <path
+         sodipodi:type="arc"
+         style="fill:#33b5e5;fill-opacity:1;stroke:none"
+         id="path3826-5"
+         sodipodi:cx="571.74634"
+         sodipodi:cy="754.7207"
+         sodipodi:rx="280.82242"
+         sodipodi:ry="280.82242"
+         d="m 852.56876,754.7207 a 280.82242,280.82242 0 1 1 -561.64484,0 280.82242,280.82242 0 1 1 561.64484,0 z"
+         transform="matrix(1.0827338,0,0,1.1115108,-182.01276,-356.39274)"
+         clip-path="url(#clipPath3988)" />
+      <path
+         sodipodi:type="arc"
+         style="fill:#171717;fill-opacity:1;stroke:none"
+         id="path3826"
+         sodipodi:cx="571.74634"
+         sodipodi:cy="754.7207"
+         sodipodi:rx="280.82242"
+         sodipodi:ry="280.82242"
+         d="m 852.56876,754.7207 a 280.82242,280.82242 0 1 1 -561.64484,0 280.82242,280.82242 0 1 1 561.64484,0 z"
+         transform="translate(-132.96887,-240.81695)" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Condensed"
+         x="188.40178"
+         y="877.94452"
+         id="text3846"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3848"
+           x="188.40178"
+           y="877.94452"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;font-family:Roboto;-inkscape-font-specification:Roboto Condensed">Yellow Submarine — The Beatles</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#999999;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Condensed"
+         x="335.05878"
+         y="924.56763"
+         id="text3846-3"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3848-4"
+           x="335.05878"
+           y="924.56763"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#999999;font-family:Roboto;-inkscape-font-specification:Roboto Condensed">Greatest Hits</tspan></text>
+      <image
+         y="303.89105"
+         x="138.86633"
+         id="image3883"
+         xlink:href="file:///home/fx/Documents/Geekeries/Android/circles/design/album.jpg"
+         height="591.74109"
+         width="591.74109"
+         clip-path="url(#clipPath3904)"
+         transform="translate(3.50258,-99.756339)" />
+      <image
+         y="995.90381"
+         x="377.04144"
+         id="image3949"
+         xlink:href="file:///home/fx/Documents/Geekeries/Android/circles/design/pause.png"
+         height="116.52792"
+         width="116.52792" />
+      <image
+         y="995.88348"
+         x="172.44243"
+         id="image3960"
+         xlink:href="file:///home/fx/Documents/Geekeries/Android/circles/design/star.png"
+         height="106.42641"
+         width="106.42641" />
+      <image
+         style="fill:#000000;fill-opacity:1"
+         y="988.00531"
+         x="582.4425"
+         id="image3971"
+         xlink:href="file:///home/fx/Documents/Geekeries/Android/circles/design/next.png"
+         height="126.62946"
+         width="126.62946" />
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         id="rect4022"
+         width="173.74623"
+         height="60.609154"
+         x="172.0972"
+         y="11.852808" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto"
+         x="180.15811"
+         y="55.994942"
+         id="text4024"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4026"
+           x="180.15811"
+           y="55.994942"
+           style="font-size:48px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;font-family:Roboto;-inkscape-font-specification:Roboto Light">Lunar</tspan></text>
+      <path
+         transform="matrix(0.857375,0,0,0.857375,121.69613,28.614527)"
+         d="m 418.57142,564.68402 a 49.285713,49.285713 0 1 1 -98.57143,0 49.285713,49.285713 0 1 1 98.57143,0 z"
+         sodipodi:ry="49.285713"
+         sodipodi:rx="49.285713"
+         sodipodi:cy="564.68402"
+         sodipodi:cx="369.28571"
+         id="path4556"
+         style="fill:#33b5e5;fill-opacity:1;stroke:none"
+         sodipodi:type="arc" />
+      <path
+         transform="matrix(0.51334209,0,0,0.51334209,248.39496,216.1843)"
+         d="m 385.7143,579.68402 a 17.142857,18.571428 0 1 1 -34.28571,0 17.142857,18.571428 0 1 1 34.28571,0 z"
+         sodipodi:ry="18.571428"
+         sodipodi:rx="17.142857"
+         sodipodi:cy="579.68402"
+         sodipodi:cx="368.57144"
+         id="path4552"
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         sodipodi:type="arc" />
+    </g>
+    <g
+       id="g4815"
+       transform="translate(-250.46506,-9.0762405)">
+      <image
+         y="-42.84729"
+         x="1062.7241"
+         id="image3023-2"
+         xlink:href="file:///home/fx/Documents/Geekeries/Android/circles/design/empty.png"
+         height="1280"
+         width="720" />
+      <rect
+         style="fill:url(#linearGradient4079-2);fill-opacity:1;stroke:none"
+         id="rect3992-3-1"
+         width="716.9632"
+         height="884.89355"
+         x="1062.608"
+         y="107.56873" />
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         id="rect3992-8"
+         width="716.9632"
+         height="145.46196"
+         x="1064.7648"
+         y="992.79742" />
+      <rect
+         style="fill:#1c1c1c;fill-opacity:1;stroke:none"
+         id="rect4020-8"
+         width="147.48227"
+         height="146.29881"
+         x="1555.6989"
+         y="992.6958" />
+      <path
+         sodipodi:type="arc"
+         style="fill:#aa66cc;fill-opacity:1;stroke:none"
+         id="path3826-5-8"
+         sodipodi:cx="571.74634"
+         sodipodi:cy="754.7207"
+         sodipodi:rx="280.82242"
+         sodipodi:ry="280.82242"
+         d="m 852.56876,754.7207 a 280.82242,280.82242 0 1 1 -561.64484,0 280.82242,280.82242 0 1 1 561.64484,0 z"
+         transform="matrix(1.0827338,0,0,1.1115108,803.56848,-347.31647)"
+         clip-path="url(#clipPath3988-1)" />
+      <path
+         sodipodi:type="arc"
+         style="fill:#171717;fill-opacity:1;stroke:none"
+         id="path3826-0"
+         sodipodi:cx="571.74634"
+         sodipodi:cy="754.7207"
+         sodipodi:rx="280.82242"
+         sodipodi:ry="280.82242"
+         d="m 852.56876,754.7207 a 280.82242,280.82242 0 1 1 -561.64484,0 280.82242,280.82242 0 1 1 561.64484,0 z"
+         transform="translate(852.61237,-231.74068)" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Condensed"
+         x="1173.983"
+         y="887.02081"
+         id="text3846-7"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3848-9"
+           x="1173.983"
+           y="887.02081"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;font-family:Roboto;-inkscape-font-specification:Roboto Condensed">Yellow Submarine — The Beatles</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#999999;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Condensed"
+         x="1320.64"
+         y="933.6438"
+         id="text3846-3-5"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3848-4-2"
+           x="1320.64"
+           y="933.6438"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#999999;font-family:Roboto;-inkscape-font-specification:Roboto Condensed">Greatest Hits</tspan></text>
+      <image
+         y="303.89105"
+         x="138.86633"
+         id="image3883-1"
+         xlink:href="file:///home/fx/Documents/Geekeries/Android/circles/design/album.jpg"
+         height="591.74109"
+         width="591.74109"
+         clip-path="url(#clipPath3904-6)"
+         transform="translate(989.08382,-90.6801)" />
+      <image
+         y="1004.9802"
+         x="1362.6227"
+         id="image3949-0"
+         xlink:href="file:///home/fx/Documents/Geekeries/Android/circles/design/pause.png"
+         height="116.52792"
+         width="116.52792" />
+      <image
+         y="1004.9597"
+         x="1158.0237"
+         id="image3960-1"
+         xlink:href="file:///home/fx/Documents/Geekeries/Android/circles/design/star.png"
+         height="106.42641"
+         width="106.42641" />
+      <image
+         style="fill:#000000;fill-opacity:1"
+         y="997.08148"
+         x="1568.0238"
+         id="image3971-7"
+         xlink:href="file:///home/fx/Documents/Geekeries/Android/circles/design/next.png"
+         height="126.62946"
+         width="126.62946" />
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         id="rect4022-0"
+         width="173.74623"
+         height="60.609154"
+         x="1157.6785"
+         y="20.929077" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto"
+         x="1165.7394"
+         y="65.071228"
+         id="text4024-3"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4026-9"
+           x="1165.7394"
+           y="65.071228"
+           style="font-size:48px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;font-family:Roboto;-inkscape-font-specification:Roboto Light">Lunar</tspan></text>
+      <path
+         transform="matrix(0.857375,0,0,0.857375,1110.6961,41.043089)"
+         d="m 418.57142,564.68402 a 49.285713,49.285713 0 1 1 -98.57143,0 49.285713,49.285713 0 1 1 98.57143,0 z"
+         sodipodi:ry="49.285713"
+         sodipodi:rx="49.285713"
+         sodipodi:cy="564.68402"
+         sodipodi:cx="369.28571"
+         id="path4556-2"
+         style="fill:#aa66cc;fill-opacity:1;stroke:none"
+         sodipodi:type="arc" />
+      <path
+         transform="matrix(0.51334209,0,0,0.51334209,1237.395,228.61286)"
+         d="m 385.7143,579.68402 a 17.142857,18.571428 0 1 1 -34.28571,0 17.142857,18.571428 0 1 1 34.28571,0 z"
+         sodipodi:ry="18.571428"
+         sodipodi:rx="17.142857"
+         sodipodi:cy="579.68402"
+         sodipodi:cx="368.57144"
+         id="path4552-3"
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         sodipodi:type="arc" />
+    </g>
+    <g
+       id="g4750"
+       transform="translate(-488.52671,-11.015274)">
+      <image
+         y="-40.908257"
+         x="2035.902"
+         id="image3023-2-5"
+         xlink:href="file:///home/fx/Documents/Geekeries/Android/circles/design/empty.png"
+         height="1280"
+         width="720" />
+      <rect
+         style="fill:url(#linearGradient4079-2-0);fill-opacity:1;stroke:none"
+         id="rect3992-3-1-0"
+         width="716.9632"
+         height="884.89355"
+         x="2035.7859"
+         y="109.50775" />
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         id="rect3992-8-1"
+         width="716.9632"
+         height="145.46196"
+         x="2037.9426"
+         y="994.73657" />
+      <rect
+         style="fill:#1c1c1c;fill-opacity:1;stroke:none"
+         id="rect4020-8-9"
+         width="147.48227"
+         height="146.29881"
+         x="2528.8767"
+         y="994.63489" />
+      <path
+         sodipodi:type="arc"
+         style="fill:#99cc00;fill-opacity:1;stroke:none"
+         id="path3826-5-8-6"
+         sodipodi:cx="571.74634"
+         sodipodi:cy="754.7207"
+         sodipodi:rx="280.82242"
+         sodipodi:ry="280.82242"
+         d="m 852.56876,754.7207 a 280.82242,280.82242 0 1 1 -561.64484,0 280.82242,280.82242 0 1 1 561.64484,0 z"
+         transform="matrix(1.0827338,0,0,1.1115108,1776.7464,-345.37746)"
+         clip-path="url(#clipPath3988-1-4)" />
+      <path
+         sodipodi:type="arc"
+         style="fill:#171717;fill-opacity:1;stroke:none"
+         id="path3826-0-5"
+         sodipodi:cx="571.74634"
+         sodipodi:cy="754.7207"
+         sodipodi:rx="280.82242"
+         sodipodi:ry="280.82242"
+         d="m 852.56876,754.7207 a 280.82242,280.82242 0 1 1 -561.64484,0 280.82242,280.82242 0 1 1 561.64484,0 z"
+         transform="translate(1825.7902,-229.80167)" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Condensed"
+         x="2147.1609"
+         y="888.95978"
+         id="text3846-7-7"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3848-9-1"
+           x="2147.1609"
+           y="888.95978"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;font-family:Roboto;-inkscape-font-specification:Roboto Condensed">Yellow Submarine — The Beatles</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#999999;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Condensed"
+         x="2293.8179"
+         y="935.58289"
+         id="text3846-3-5-3"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3848-4-2-15"
+           x="2293.8179"
+           y="935.58289"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#999999;font-family:Roboto;-inkscape-font-specification:Roboto Condensed">Greatest Hits</tspan></text>
+      <image
+         y="303.89105"
+         x="138.86633"
+         id="image3883-1-7"
+         xlink:href="file:///home/fx/Documents/Geekeries/Android/circles/design/album.jpg"
+         height="591.74109"
+         width="591.74109"
+         clip-path="url(#clipPath3904-6-4)"
+         transform="translate(1962.2617,-88.74109)" />
+      <image
+         y="1006.9193"
+         x="2335.8005"
+         id="image3949-0-5"
+         xlink:href="file:///home/fx/Documents/Geekeries/Android/circles/design/pause.png"
+         height="116.52792"
+         width="116.52792" />
+      <image
+         y="1006.8988"
+         x="2131.2014"
+         id="image3960-1-4"
+         xlink:href="file:///home/fx/Documents/Geekeries/Android/circles/design/star.png"
+         height="106.42641"
+         width="106.42641" />
+      <image
+         style="fill:#000000;fill-opacity:1"
+         y="999.02051"
+         x="2541.2017"
+         id="image3971-7-0"
+         xlink:href="file:///home/fx/Documents/Geekeries/Android/circles/design/next.png"
+         height="126.62946"
+         width="126.62946" />
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         id="rect4022-0-9"
+         width="173.74623"
+         height="60.609154"
+         x="2130.8562"
+         y="22.868103" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto"
+         x="2138.9172"
+         y="67.010246"
+         id="text4024-3-4"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4026-9-1"
+           x="2138.9172"
+           y="67.010246"
+           style="font-size:48px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;font-family:Roboto;-inkscape-font-specification:Roboto Light">Lunar</tspan></text>
+      <path
+         transform="matrix(0.857375,0,0,0.857375,2087.1927,40.25522)"
+         d="m 418.57142,564.68402 a 49.285713,49.285713 0 1 1 -98.57143,0 49.285713,49.285713 0 1 1 98.57143,0 z"
+         sodipodi:ry="49.285713"
+         sodipodi:rx="49.285713"
+         sodipodi:cy="564.68402"
+         sodipodi:cx="369.28571"
+         id="path4556-2-7"
+         style="fill:#99cc00;fill-opacity:1;stroke:none"
+         sodipodi:type="arc" />
+      <path
+         transform="matrix(0.51334209,0,0,0.51334209,2213.8916,227.82499)"
+         d="m 385.7143,579.68402 a 17.142857,18.571428 0 1 1 -34.28571,0 17.142857,18.571428 0 1 1 34.28571,0 z"
+         sodipodi:ry="18.571428"
+         sodipodi:rx="17.142857"
+         sodipodi:cy="579.68402"
+         sodipodi:cx="368.57144"
+         id="path4552-3-5"
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         sodipodi:type="arc" />
+    </g>
+    <g
+       id="g4943">
+      <image
+         y="1243.0764"
+         x="77.142853"
+         id="image3023-8"
+         xlink:href="file:///home/fx/Documents/Geekeries/Android/circles/design/empty.png"
+         height="1280"
+         width="720" />
+      <rect
+         style="fill:url(#linearGradient4919);fill-opacity:1;stroke:none"
+         id="rect3992-3-17"
+         width="716.9632"
+         height="884.89355"
+         x="77.026764"
+         y="1393.4923" />
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         id="rect3992-80"
+         width="716.9632"
+         height="145.46196"
+         x="79.183441"
+         y="2278.7209" />
+      <rect
+         style="fill:#1c1c1c;fill-opacity:1;stroke:none"
+         id="rect4020-85"
+         width="147.48227"
+         height="146.29881"
+         x="570.11755"
+         y="2278.6194" />
+      <path
+         sodipodi:type="arc"
+         style="fill:#ffbb33;fill-opacity:1;stroke:none"
+         id="path3826-5-4"
+         sodipodi:cx="571.74634"
+         sodipodi:cy="754.7207"
+         sodipodi:rx="280.82242"
+         sodipodi:ry="280.82242"
+         d="m 852.56876,754.7207 a 280.82242,280.82242 0 1 1 -561.64484,0 280.82242,280.82242 0 1 1 561.64484,0 z"
+         transform="matrix(1.0827338,0,0,1.1115108,-182.01278,938.60718)"
+         clip-path="url(#clipPath3988-5)" />
+      <path
+         sodipodi:type="arc"
+         style="fill:#171717;fill-opacity:1;stroke:none"
+         id="path3826-05"
+         sodipodi:cx="571.74634"
+         sodipodi:cy="754.7207"
+         sodipodi:rx="280.82242"
+         sodipodi:ry="280.82242"
+         d="m 852.56876,754.7207 a 280.82242,280.82242 0 1 1 -561.64484,0 280.82242,280.82242 0 1 1 561.64484,0 z"
+         transform="translate(-132.96887,1054.183)" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Condensed"
+         x="188.40176"
+         y="2172.9446"
+         id="text3846-6"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3848-7"
+           x="188.40176"
+           y="2172.9446"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;font-family:Roboto;-inkscape-font-specification:Roboto Condensed">Yellow Submarine — The Beatles</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#999999;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Condensed"
+         x="335.05859"
+         y="2219.5676"
+         id="text3846-3-6"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3848-4-1"
+           x="335.05859"
+           y="2219.5676"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#999999;font-family:Roboto;-inkscape-font-specification:Roboto Condensed">Greatest Hits</tspan></text>
+      <image
+         y="303.89105"
+         x="138.86633"
+         id="image3883-9"
+         xlink:href="file:///home/fx/Documents/Geekeries/Android/circles/design/album.jpg"
+         height="591.74109"
+         width="591.74109"
+         clip-path="url(#clipPath3904-7)"
+         transform="translate(3.5025297,1195.2436)" />
+      <image
+         y="2290.9038"
+         x="377.04132"
+         id="image3949-6"
+         xlink:href="file:///home/fx/Documents/Geekeries/Android/circles/design/pause.png"
+         height="116.52792"
+         width="116.52792" />
+      <image
+         y="2290.8833"
+         x="172.44235"
+         id="image3960-9"
+         xlink:href="file:///home/fx/Documents/Geekeries/Android/circles/design/star.png"
+         height="106.42641"
+         width="106.42641" />
+      <image
+         style="fill:#000000;fill-opacity:1"
+         y="2283.0051"
+         x="582.4425"
+         id="image3971-0"
+         xlink:href="file:///home/fx/Documents/Geekeries/Android/circles/design/next.png"
+         height="126.62946"
+         width="126.62946" />
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         id="rect4022-1"
+         width="173.74623"
+         height="60.609154"
+         x="172.09714"
+         y="1306.8527" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto"
+         x="180.15805"
+         y="1350.9949"
+         id="text4024-2"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4026-6"
+           x="180.15805"
+           y="1350.9949"
+           style="font-size:48px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;font-family:Roboto;-inkscape-font-specification:Roboto Light">Lunar</tspan></text>
+      <path
+         inkscape:transform-center-y="-3.8589834"
+         inkscape:transform-center-x="1.1981815"
+         transform="matrix(0.76280846,0,0,0.76280846,669.8673,1853.7114)"
+         d="m -537.40119,704.27378 -41.90521,-18.21737 -38.76374,24.1928 4.37633,-45.4837 -34.98738,-29.39053 44.60993,-9.8931 17.14036,-42.35714 23.19412,39.36943 45.5807,3.21237 -30.27518,34.22474 z"
+         inkscape:randomized="0"
+         inkscape:rounded="0"
+         inkscape:flatsided="false"
+         sodipodi:arg2="1.4968579"
+         sodipodi:arg1="0.8685394"
+         sodipodi:r2="34.404556"
+         sodipodi:r1="68.809113"
+         sodipodi:cy="651.74585"
+         sodipodi:cx="-581.8479"
+         sodipodi:sides="5"
+         id="path4532-1"
+         style="fill:#ffbb33;fill-opacity:1;stroke:none"
+         sodipodi:type="star" />
+      <path
+         transform="matrix(0.857375,0,0,0.857375,134.21425,1328.0066)"
+         d="m 418.57142,564.68402 a 49.285713,49.285713 0 1 1 -98.57143,0 49.285713,49.285713 0 1 1 98.57143,0 z"
+         sodipodi:ry="49.285713"
+         sodipodi:rx="49.285713"
+         sodipodi:cy="564.68402"
+         sodipodi:cx="369.28571"
+         id="path4556-2-7-3-0"
+         style="fill:#ffbb33;fill-opacity:1;stroke:none"
+         sodipodi:type="arc" />
+      <path
+         transform="matrix(0.51334209,0,0,0.51334209,260.91315,1515.5763)"
+         d="m 385.7143,579.68402 a 17.142857,18.571428 0 1 1 -34.28571,0 17.142857,18.571428 0 1 1 34.28571,0 z"
+         sodipodi:ry="18.571428"
+         sodipodi:rx="17.142857"
+         sodipodi:cy="579.68402"
+         sodipodi:cx="368.57144"
+         id="path4552-3-5-9-5"
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         sodipodi:type="arc" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#999999;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Condensed"
+         x="344.18243"
+         y="1444.963"
+         id="text3846-3-6-7"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3848-4-1-5"
+           x="344.18243"
+           y="1444.963"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#999999;font-family:Roboto;-inkscape-font-specification:Roboto Condensed">2:03 / 6:46</tspan></text>
+    </g>
+    <g
+       id="g5441">
+      <g
+         id="g5381">
+        <path
+           sodipodi:type="arc"
+           style="fill:url(#linearGradient5251);fill-opacity:1;stroke:none"
+           id="path5086-8"
+           sodipodi:cx="2636.498"
+           sodipodi:cy="782.98938"
+           sodipodi:rx="103.03556"
+           sodipodi:ry="103.03556"
+           d="m 2739.5336,782.98938 a 103.03556,103.03556 0 1 1 -206.0711,0 103.03556,103.03556 0 1 1 206.0711,0 z"
+           transform="translate(64.38585,-69.055769)" />
+        <path
+           sodipodi:type="arc"
+           style="fill:#ff6600;fill-opacity:1;stroke:none"
+           id="path5086-4"
+           sodipodi:cx="2636.498"
+           sodipodi:cy="782.98938"
+           sodipodi:rx="103.03556"
+           sodipodi:ry="103.03556"
+           d="m 2739.5336,782.98938 a 103.03556,103.03556 0 1 1 -206.0711,0 103.03556,103.03556 0 1 1 206.0711,0 z"
+           transform="matrix(0.12851216,0,0,0.12851216,2361.5045,612.81858)" />
+        <path
+           style="fill:#2b98c1;fill-opacity:1;stroke:none"
+           d="m 2597.0423,713.84202 c 0,56.905 46.1263,103.0313 103.0313,103.0313 8.7109,0 17.1708,-1.0899 25.25,-3.125 -41.7835,-13.1409 -72.0938,-52.1905 -72.0938,-98.3125 0,-48.1834 33.0664,-88.6675 77.75,-99.9375 -9.7505,-3.0597 -20.1462,-4.7187 -30.9062,-4.7187 -56.905,0 -103.0313,46.1574 -103.0313,103.0624 z"
+           id="path5086-2"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="sscscss" />
+        <path
+           style="fill:#ff6600;fill-opacity:1;stroke:none"
+           d="m 2745.4773,711.0022 c -0.6443,-21.16763 -18.3249,-37.80354 -39.4925,-37.15926 -3.2402,0.0986 -6.3748,0.59983 -9.357,1.44836 15.6914,4.4151 27.4086,18.59768 27.9307,35.75427 0.5455,17.92333 -11.2963,33.35705 -27.7901,38.05524 3.6616,1.02777 7.5474,1.5272 11.5499,1.40537 21.1678,-0.64429 37.8034,-18.33632 37.159,-39.50398 z"
+           id="path5086-2-0"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="sscscss" />
+        <path
+           style="fill:#ff6600;fill-opacity:1;stroke:none"
+           d="m 2789.6816,708.33826 c -0.8768,-28.80622 -24.9376,-51.44539 -53.7437,-50.56863 -4.4097,0.13419 -8.6754,0.8163 -12.7336,1.97102 21.3537,6.00836 37.2991,25.3089 38.0098,48.65663 0.7421,24.39115 -15.3727,45.39432 -37.8185,51.78791 4.9829,1.39868 10.271,2.07831 15.718,1.91252 28.8062,-0.87678 51.445,-24.95318 50.568,-53.75945 z"
+           id="path5086-2-0-8"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="sscscss" />
+      </g>
+    </g>
+    <image
+       y="157.30342"
+       x="3022.6367"
+       id="image5318"
+       xlink:href="file:///home/fx/Documents/Geekeries/Android/circles/design/headphones.png"
+       height="298.99673"
+       width="373.74594" />
+    <g
+       id="g5375">
+      <path
+         transform="translate(576.44517,-54.693759)"
+         d="m 2739.5336,782.98938 a 103.03556,103.03556 0 1 1 -206.0711,0 103.03556,103.03556 0 1 1 206.0711,0 z"
+         sodipodi:ry="103.03556"
+         sodipodi:rx="103.03556"
+         sodipodi:cy="782.98938"
+         sodipodi:cx="2636.498"
+         id="path5086-8-2"
+         style="fill:url(#linearGradient5272);fill-opacity:1;stroke:none"
+         sodipodi:type="arc" />
+      <path
+         sodipodi:nodetypes="sscscss"
+         inkscape:connector-curvature="0"
+         id="path5086-2-9"
+         d="m 3109.1017,728.20403 c 0,56.905 46.1263,103.0313 103.0313,103.0313 8.7109,0 17.1708,-1.0899 25.25,-3.125 -41.7835,-13.1409 -72.0938,-52.1905 -72.0938,-98.3125 0,-48.1834 33.0664,-88.6675 77.75,-99.9375 -9.7505,-3.0597 -20.1462,-4.7187 -30.9062,-4.7187 -56.905,0 -103.0313,46.1574 -103.0313,103.0624 z"
+         style="fill:#33b5e5;fill-opacity:1;stroke:none" />
+      <path
+         sodipodi:nodetypes="csccscsccc"
+         inkscape:connector-curvature="0"
+         id="path5321"
+         d="m 3119.2809,652.48746 c -13.9286,16.78572 -24.9895,44.95799 -24.9895,83.34377 0,38.38578 17.6777,56.56852 17.6777,56.56852 l -35.8604,1.01015 c 0,0 -35.3553,-7.07102 -35.3553,-57.57867 0,-50.50765 39.3959,-52.52795 39.3959,-52.52795 0,0 25.8789,-75.4473 131.9449,-75.4473 0.084,0 -0.033,4.02235 -0.033,4.02235 -50.0512,2.85643 -76.2511,21.70556 -92.7802,40.60913 z"
+         style="fill:#ff6600;fill-opacity:1;stroke:none" />
+      <path
+         sodipodi:nodetypes="csccscsccc"
+         inkscape:connector-curvature="0"
+         id="path5321-0"
+         d="m 3303.3277,652.50235 c 13.9286,16.78572 24.9895,44.95799 24.9895,83.34377 0,38.38579 -19.1422,56.27267 -19.1422,56.27267 l 37.3249,1.30601 c 0,0 35.3553,-7.07102 35.3553,-57.57868 0,-50.50765 -39.3959,-52.52795 -39.3959,-52.52795 0,0 -25.8789,-75.4473 -131.9449,-75.4473 -0.084,0 0.033,4.02235 0.033,4.02235 50.0512,2.85643 76.2511,21.70556 92.7802,40.60913 z"
+         style="fill:#ff6600;fill-opacity:1;stroke:none" />
+    </g>
+    <g
+       id="g5601">
+      <image
+         y="1243.0764"
+         x="812.25909"
+         id="image3023-2-4"
+         xlink:href="file:///home/fx/Documents/Geekeries/Android/circles/design/empty.png"
+         height="1280"
+         width="720" />
+      <rect
+         style="fill:url(#linearGradient5513);fill-opacity:1;stroke:none"
+         id="rect3992-3-1-6"
+         width="716.9632"
+         height="884.89355"
+         x="812.14288"
+         y="1393.4924" />
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         id="rect3992-8-3"
+         width="716.9632"
+         height="145.46196"
+         x="814.29962"
+         y="2278.7212" />
+      <rect
+         style="fill:#1c1c1c;fill-opacity:1;stroke:none"
+         id="rect4020-8-8"
+         width="147.48227"
+         height="146.29881"
+         x="1305.2338"
+         y="2278.6196" />
+      <path
+         sodipodi:type="arc"
+         style="fill:#ff0000;fill-opacity:0;stroke:none"
+         id="path3826-5-8-3"
+         sodipodi:cx="571.74634"
+         sodipodi:cy="754.7207"
+         sodipodi:rx="280.82242"
+         sodipodi:ry="280.82242"
+         d="m 852.56876,754.7207 a 280.82242,280.82242 0 1 1 -561.64484,0 280.82242,280.82242 0 1 1 561.64484,0 z"
+         transform="matrix(1.0827338,0,0,1.1115108,553.10333,938.6073)"
+         clip-path="url(#clipPath3988-1-1)" />
+      <path
+         sodipodi:type="arc"
+         style="fill:#171717;fill-opacity:1;stroke:none"
+         id="path3826-0-4"
+         sodipodi:cx="571.74634"
+         sodipodi:cy="754.7207"
+         sodipodi:rx="280.82242"
+         sodipodi:ry="280.82242"
+         d="m 852.56876,754.7207 a 280.82242,280.82242 0 1 1 -561.64484,0 280.82242,280.82242 0 1 1 561.64484,0 z"
+         transform="translate(602.14723,1054.1831)" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Condensed"
+         x="923.51788"
+         y="2172.9446"
+         id="text3846-7-2"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3848-9-4"
+           x="923.51788"
+           y="2172.9446"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;font-family:Roboto;-inkscape-font-specification:Roboto Condensed">Yellow Submarine — The Beatles</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#999999;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Condensed"
+         x="1070.1749"
+         y="2219.5676"
+         id="text3846-3-5-7"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3848-4-2-1"
+           x="1070.1749"
+           y="2219.5676"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#999999;font-family:Roboto;-inkscape-font-specification:Roboto Condensed">Greatest Hits</tspan></text>
+      <path
+         sodipodi:type="arc"
+         style="fill:#ff4444;fill-opacity:1;stroke:none"
+         id="path3826-5-8-2"
+         sodipodi:cx="571.74634"
+         sodipodi:cy="754.7207"
+         sodipodi:rx="280.82242"
+         sodipodi:ry="280.82242"
+         d="m 852.56876,754.7207 a 280.82242,280.82242 0 1 1 -561.64484,0 280.82242,280.82242 0 1 1 561.64484,0 z"
+         transform="matrix(1.0827338,0,0,1.1115108,545.382,937.9307)"
+         clip-path="url(#clipPath3988-1-2)" />
+      <image
+         y="303.89105"
+         x="138.86633"
+         id="image3883-1-2"
+         xlink:href="file:///home/fx/Documents/Geekeries/Android/circles/design/album.jpg"
+         height="591.74109"
+         width="591.74109"
+         clip-path="url(#clipPath3904-6-0)"
+         transform="translate(738.61873,1195.2436)" />
+      <image
+         y="2290.9041"
+         x="1112.1576"
+         id="image3949-0-0"
+         xlink:href="file:///home/fx/Documents/Geekeries/Android/circles/design/pause.png"
+         height="116.52792"
+         width="116.52792" />
+      <image
+         y="2290.8835"
+         x="907.55865"
+         id="image3960-1-0"
+         xlink:href="file:///home/fx/Documents/Geekeries/Android/circles/design/star.png"
+         height="106.42641"
+         width="106.42641" />
+      <image
+         style="fill:#000000;fill-opacity:1"
+         y="2283.0051"
+         x="1317.5587"
+         id="image3971-7-3"
+         xlink:href="file:///home/fx/Documents/Geekeries/Android/circles/design/next.png"
+         height="126.62946"
+         width="126.62946" />
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         id="rect4022-0-0"
+         width="262.31763"
+         height="60.609154"
+         x="818.64203"
+         y="1306.8528" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto"
+         x="921.70282"
+         y="1354.995"
+         id="text4024-3-9"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4026-9-8"
+           x="921.70282"
+           y="1354.995"
+           style="font-size:48px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;font-family:Roboto;-inkscape-font-specification:Roboto Light">Lunar</tspan></text>
+      <path
+         inkscape:transform-center-y="-3.8589834"
+         inkscape:transform-center-x="1.1981815"
+         transform="matrix(0.76280846,0,0,0.76280846,1406.0391,1853.1752)"
+         d="m -537.40119,704.27378 -41.90521,-18.21737 -38.76374,24.1928 4.37633,-45.4837 -34.98738,-29.39053 44.60993,-9.8931 17.14036,-42.35714 23.19412,39.36943 45.5807,3.21237 -30.27518,34.22474 z"
+         inkscape:randomized="0"
+         inkscape:rounded="0"
+         inkscape:flatsided="false"
+         sodipodi:arg2="1.4968579"
+         sodipodi:arg1="0.8685394"
+         sodipodi:r2="34.404556"
+         sodipodi:r1="68.809113"
+         sodipodi:cy="651.74585"
+         sodipodi:cx="-581.8479"
+         sodipodi:sides="5"
+         id="path4532"
+         style="fill:#ff4444;fill-opacity:1;stroke:none"
+         sodipodi:type="star" />
+      <path
+         transform="matrix(0.857375,0,0,0.857375,863.74919,1330.359)"
+         d="m 418.57142,564.68402 a 49.285713,49.285713 0 1 1 -98.57143,0 49.285713,49.285713 0 1 1 98.57143,0 z"
+         sodipodi:ry="49.285713"
+         sodipodi:rx="49.285713"
+         sodipodi:cy="564.68402"
+         sodipodi:cx="369.28571"
+         id="path4556-2-7-3"
+         style="fill:#ff4444;fill-opacity:1;stroke:none"
+         sodipodi:type="arc" />
+      <path
+         transform="matrix(0.51334209,0,0,0.51334209,990.44809,1517.9287)"
+         d="m 385.7143,579.68402 a 17.142857,18.571428 0 1 1 -34.28571,0 17.142857,18.571428 0 1 1 34.28571,0 z"
+         sodipodi:ry="18.571428"
+         sodipodi:rx="17.142857"
+         sodipodi:cy="579.68402"
+         sodipodi:cx="368.57144"
+         id="path4552-3-5-9"
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         sodipodi:type="arc" />
+      <g
+         id="g5375-2"
+         transform="matrix(0.22519988,0,0,0.22519988,144.55566,1175.4556)">
+        <path
+           sodipodi:type="arc"
+           style="fill:url(#linearGradient5272-6);fill-opacity:1;stroke:none"
+           id="path5086-8-2-7"
+           sodipodi:cx="2636.498"
+           sodipodi:cy="782.98938"
+           sodipodi:rx="103.03556"
+           sodipodi:ry="103.03556"
+           d="m 2739.5336,782.98938 c 0,56.90497 -46.1306,103.03556 -103.0356,103.03556 -56.9049,0 -103.0355,-46.13059 -103.0355,-103.03556 0,-56.90497 46.1306,-103.03556 103.0355,-103.03556 56.905,0 103.0356,46.13059 103.0356,103.03556 z"
+           transform="translate(576.44517,-54.693759)" />
+        <path
+           style="fill:#33b5e5;fill-opacity:1;stroke:none"
+           d="m 3109.1017,728.20403 c 0,56.905 46.1263,103.0313 103.0313,103.0313 8.7109,0 17.1708,-1.0899 25.25,-3.125 -41.7835,-13.1409 -72.0938,-52.1905 -72.0938,-98.3125 0,-48.1834 33.0664,-88.6675 77.75,-99.9375 -9.7505,-3.0597 -20.1462,-4.7187 -30.9062,-4.7187 -56.905,0 -103.0313,46.1574 -103.0313,103.0624 z"
+           id="path5086-2-9-4"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="sscscss" />
+        <path
+           style="fill:#ff6600;fill-opacity:1;stroke:none"
+           d="m 3119.2809,652.48746 c -13.9286,16.78572 -24.9895,44.95799 -24.9895,83.34377 0,38.38578 17.6777,56.56852 17.6777,56.56852 l -35.8604,1.01015 c 0,0 -35.3553,-7.07102 -35.3553,-57.57867 0,-50.50765 39.3959,-52.52795 39.3959,-52.52795 0,0 25.8789,-75.4473 131.9449,-75.4473 0.084,0 -0.033,4.02235 -0.033,4.02235 -50.0512,2.85643 -76.2511,21.70556 -92.7802,40.60913 z"
+           id="path5321-4"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="csccscsccc" />
+        <path
+           style="fill:#ff6600;fill-opacity:1;stroke:none"
+           d="m 3303.3277,652.50235 c 13.9286,16.78572 24.9895,44.95799 24.9895,83.34377 0,38.38579 -19.1422,56.27267 -19.1422,56.27267 l 37.3249,1.30601 c 0,0 35.3553,-7.07102 35.3553,-57.57868 0,-50.50765 -39.3959,-52.52795 -39.3959,-52.52795 0,0 -25.8789,-75.4473 -131.9449,-75.4473 -0.084,0 0.033,4.02235 0.033,4.02235 50.0512,2.85643 76.2511,21.70556 92.7802,40.60913 z"
+           id="path5321-0-7"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="csccscsccc" />
+      </g>
+    </g>
+    <g
+       id="g5567">
+      <image
+         y="1243.0764"
+         x="1547.3754"
+         id="image3023-2-5-6"
+         xlink:href="file:///home/fx/Documents/Geekeries/Android/circles/design/empty.png"
+         height="1280"
+         width="720" />
+      <rect
+         style="fill:url(#linearGradient4897);fill-opacity:1;stroke:none"
+         id="rect3992-3-1-0-2"
+         width="716.9632"
+         height="884.89355"
+         x="1547.2592"
+         y="1393.4924" />
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         id="rect3992-8-1-5"
+         width="716.9632"
+         height="145.46196"
+         x="1549.4159"
+         y="2278.7212" />
+      <rect
+         style="fill:#1c1c1c;fill-opacity:1;stroke:none"
+         id="rect4020-8-9-3"
+         width="147.48227"
+         height="146.29881"
+         x="2040.3501"
+         y="2278.6196" />
+      <path
+         sodipodi:type="arc"
+         style="fill:#171717;fill-opacity:1;stroke:none"
+         id="path3826-0-5-2"
+         sodipodi:cx="571.74634"
+         sodipodi:cy="754.7207"
+         sodipodi:rx="280.82242"
+         sodipodi:ry="280.82242"
+         d="m 852.56876,754.7207 a 280.82242,280.82242 0 1 1 -561.64484,0 280.82242,280.82242 0 1 1 561.64484,0 z"
+         transform="translate(1337.2636,1054.1831)" />
+      <path
+         sodipodi:end="1.0471976"
+         sodipodi:start="0"
+         transform="matrix(0.85718429,0.01808266,0.01808266,-0.85718429,373.01169,3317.7122)"
+         d="M 2031.4286,1807.1428 A 257.85715,259.28571 0 0 1 1902.5,2031.6908 l -128.9286,-224.548 z"
+         sodipodi:ry="259.28571"
+         sodipodi:rx="257.85715"
+         sodipodi:cy="1807.1428"
+         sodipodi:cx="1773.5714"
+         id="path4975-5"
+         style="fill:#aa66cc;fill-opacity:1;stroke:none"
+         sodipodi:type="arc" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Condensed"
+         x="1658.6343"
+         y="2172.9446"
+         id="text3846-7-7-7"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3848-9-1-2"
+           x="1658.6343"
+           y="2172.9446"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;font-family:Roboto;-inkscape-font-specification:Roboto Condensed">Yellow Submarine — The Beatles</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#999999;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Condensed"
+         x="1805.2913"
+         y="2219.5676"
+         id="text3846-3-5-3-2"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3848-4-2-15-3"
+           x="1805.2913"
+           y="2219.5676"
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#999999;font-family:Roboto;-inkscape-font-specification:Roboto Condensed">Greatest Hits</tspan></text>
+      <image
+         y="2290.9041"
+         x="1847.2739"
+         id="image3949-0-5-6"
+         xlink:href="file:///home/fx/Documents/Geekeries/Android/circles/design/pause.png"
+         height="116.52792"
+         width="116.52792" />
+      <image
+         y="2290.8835"
+         x="1642.6748"
+         id="image3960-1-4-9"
+         xlink:href="file:///home/fx/Documents/Geekeries/Android/circles/design/star.png"
+         height="106.42641"
+         width="106.42641" />
+      <image
+         style="fill:#000000;fill-opacity:1"
+         y="2283.0051"
+         x="2052.675"
+         id="image3971-7-0-7"
+         xlink:href="file:///home/fx/Documents/Geekeries/Android/circles/design/next.png"
+         height="126.62946"
+         width="126.62946" />
+      <path
+         sodipodi:end="1.0471976"
+         sodipodi:start="0"
+         transform="matrix(0.85696815,-0.02640982,0.02640982,0.85696815,357.3933,326.08828)"
+         d="M 2031.4286,1807.1428 A 257.85715,259.28571 0 0 1 1902.5,2031.6908 l -128.9286,-224.548 z"
+         sodipodi:ry="259.28571"
+         sodipodi:rx="257.85715"
+         sodipodi:cy="1807.1428"
+         sodipodi:cx="1773.5714"
+         id="path4975"
+         style="fill:#ff4444;fill-opacity:1;stroke:none"
+         sodipodi:type="arc" />
+      <path
+         sodipodi:end="1.0471976"
+         sodipodi:start="0"
+         transform="matrix(0.42984106,0.74184133,-0.74184133,0.42984106,2489.579,-258.37652)"
+         d="M 2031.4286,1807.1428 A 257.85715,259.28571 0 0 1 1902.5,2031.6908 l -128.9286,-224.548 z"
+         sodipodi:ry="259.28571"
+         sodipodi:rx="257.85715"
+         sodipodi:cy="1807.1428"
+         sodipodi:cx="1773.5714"
+         id="path4975-9"
+         style="fill:#4d4d4d;fill-opacity:1;stroke:none"
+         sodipodi:type="arc" />
+      <path
+         sodipodi:end="1.0471976"
+         sodipodi:start="0"
+         transform="matrix(-0.42753291,0.74317394,-0.74317394,-0.42753291,3993.7613,1283.6716)"
+         d="M 2031.4286,1807.1428 A 257.85715,259.28571 0 0 1 1902.5,2031.6908 l -128.9286,-224.548 z"
+         sodipodi:ry="259.28571"
+         sodipodi:rx="257.85715"
+         sodipodi:cy="1807.1428"
+         sodipodi:cx="1773.5714"
+         id="path4975-9-2"
+         style="fill:#99cc00;fill-opacity:1;stroke:none"
+         sodipodi:type="arc" />
+      <path
+         sodipodi:end="1.0471976"
+         sodipodi:start="0"
+         transform="matrix(0.42261338,-0.74598246,-0.74598246,-0.42261338,2510.7751,3875.4341)"
+         d="M 2031.4286,1807.1428 A 257.85715,259.28571 0 0 1 1902.5,2031.6908 l -128.9286,-224.548 z"
+         sodipodi:ry="259.28571"
+         sodipodi:rx="257.85715"
+         sodipodi:cy="1807.1428"
+         sodipodi:cx="1773.5714"
+         id="path4975-9-6"
+         style="fill:#33b5e5;fill-opacity:1;stroke:none"
+         sodipodi:type="arc" />
+      <path
+         sodipodi:end="1.0471976"
+         sodipodi:start="0"
+         transform="matrix(-0.43473307,-0.73898515,-0.73898515,0.43473307,3999.9046,2324.8448)"
+         d="M 2031.4286,1807.1428 A 257.85715,259.28571 0 0 1 1902.5,2031.6908 l -128.9286,-224.548 z"
+         sodipodi:ry="259.28571"
+         sodipodi:rx="257.85715"
+         sodipodi:cy="1807.1428"
+         sodipodi:cx="1773.5714"
+         id="path4975-9-2-9"
+         style="fill:#ffbb33;fill-opacity:1;stroke:none"
+         sodipodi:type="arc" />
+      <path
+         transform="matrix(0.857375,0,0,0.857375,1598.6661,1324.2399)"
+         d="m 418.57142,564.68402 a 49.285713,49.285713 0 1 1 -98.57143,0 49.285713,49.285713 0 1 1 98.57143,0 z"
+         sodipodi:ry="49.285713"
+         sodipodi:rx="49.285713"
+         sodipodi:cy="564.68402"
+         sodipodi:cx="369.28571"
+         id="path4556-2-7-6"
+         style="fill:#333333;fill-opacity:1;stroke:none"
+         sodipodi:type="arc" />
+      <path
+         transform="matrix(0.51334209,0,0,0.51334209,1725.365,1511.8097)"
+         d="m 385.7143,579.68402 a 17.142857,18.571428 0 1 1 -34.28571,0 17.142857,18.571428 0 1 1 34.28571,0 z"
+         sodipodi:ry="18.571428"
+         sodipodi:rx="17.142857"
+         sodipodi:cy="579.68402"
+         sodipodi:cx="368.57144"
+         id="path4552-3-5-8"
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         sodipodi:type="arc" />
+      <g
+         style="fill:#ffffff"
+         transform="translate(2.8571429,-5.7142857)"
+         id="g5081">
+        <path
+           sodipodi:type="arc"
+           style="fill:#ffffff;fill-opacity:1;stroke:none"
+           id="path5043"
+           sodipodi:cx="1801.4286"
+           sodipodi:cy="2035"
+           sodipodi:rx="7.1428571"
+           sodipodi:ry="7.1428571"
+           d="m 1808.5714,2035 c 0,3.9449 -3.1979,7.1429 -7.1428,7.1429 -3.9449,0 -7.1429,-3.198 -7.1429,-7.1429 0,-3.9449 3.198,-7.1429 7.1429,-7.1429 3.9449,0 7.1428,3.198 7.1428,7.1429 z"
+           transform="translate(77.026749,-50.780673)" />
+        <path
+           transform="translate(102.02675,-50.780673)"
+           sodipodi:type="arc"
+           style="fill:#ffffff;fill-opacity:1;stroke:none"
+           id="path5043-6"
+           sodipodi:cx="1801.4286"
+           sodipodi:cy="2035"
+           sodipodi:rx="7.1428571"
+           sodipodi:ry="7.1428571"
+           d="m 1808.5714,2035 c 0,3.9449 -3.1979,7.1429 -7.1428,7.1429 -3.9449,0 -7.1429,-3.198 -7.1429,-7.1429 0,-3.9449 3.198,-7.1429 7.1429,-7.1429 3.9449,0 7.1428,3.198 7.1428,7.1429 z" />
+        <path
+           transform="translate(127.02673,-50.780673)"
+           sodipodi:type="arc"
+           style="fill:#ffffff;fill-opacity:1;stroke:none"
+           id="path5043-6-3"
+           sodipodi:cx="1801.4286"
+           sodipodi:cy="2035"
+           sodipodi:rx="7.1428571"
+           sodipodi:ry="7.1428571"
+           d="m 1808.5714,2035 c 0,3.9449 -3.1979,7.1429 -7.1428,7.1429 -3.9449,0 -7.1429,-3.198 -7.1429,-7.1429 0,-3.9449 3.198,-7.1429 7.1429,-7.1429 3.9449,0 7.1428,3.198 7.1428,7.1429 z" />
+      </g>
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         id="rect4022-0-0-9"
+         width="262.31763"
+         height="60.609154"
+         x="1560.0714"
+         y="1308.8528" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto"
+         x="1663.1322"
+         y="1356.995"
+         id="text4024-3-9-1"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4026-9-8-4"
+           x="1663.1322"
+           y="1356.995"
+           style="font-size:48px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;font-family:Roboto;-inkscape-font-specification:Roboto Light">Lunar</tspan></text>
+      <g
+         id="g5375-2-9"
+         transform="matrix(0.22519988,0,0,0.22519988,885.98503,1177.4556)">
+        <path
+           sodipodi:type="arc"
+           style="fill:url(#linearGradient5272-6-8);fill-opacity:1;stroke:none"
+           id="path5086-8-2-7-1"
+           sodipodi:cx="2636.498"
+           sodipodi:cy="782.98938"
+           sodipodi:rx="103.03556"
+           sodipodi:ry="103.03556"
+           d="m 2739.5336,782.98938 c 0,56.90497 -46.1306,103.03556 -103.0356,103.03556 -56.9049,0 -103.0355,-46.13059 -103.0355,-103.03556 0,-56.90497 46.1306,-103.03556 103.0355,-103.03556 56.905,0 103.0356,46.13059 103.0356,103.03556 z"
+           transform="translate(576.44517,-54.693759)" />
+        <path
+           style="fill:#33b5e5;fill-opacity:1;stroke:none"
+           d="m 3109.1017,728.20403 c 0,56.905 46.1263,103.0313 103.0313,103.0313 8.7109,0 17.1708,-1.0899 25.25,-3.125 -41.7835,-13.1409 -72.0938,-52.1905 -72.0938,-98.3125 0,-48.1834 33.0664,-88.6675 77.75,-99.9375 -9.7505,-3.0597 -20.1462,-4.7187 -30.9062,-4.7187 -56.905,0 -103.0313,46.1574 -103.0313,103.0624 z"
+           id="path5086-2-9-4-6"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="sscscss" />
+        <path
+           style="fill:#ff6600;fill-opacity:1;stroke:none"
+           d="m 3119.2809,652.48746 c -13.9286,16.78572 -24.9895,44.95799 -24.9895,83.34377 0,38.38578 17.6777,56.56852 17.6777,56.56852 l -35.8604,1.01015 c 0,0 -35.3553,-7.07102 -35.3553,-57.57867 0,-50.50765 39.3959,-52.52795 39.3959,-52.52795 0,0 25.8789,-75.4473 131.9449,-75.4473 0.084,0 -0.033,4.02235 -0.033,4.02235 -50.0512,2.85643 -76.2511,21.70556 -92.7802,40.60913 z"
+           id="path5321-4-9"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="csccscsccc" />
+        <path
+           style="fill:#ff6600;fill-opacity:1;stroke:none"
+           d="m 3303.3277,652.50235 c 13.9286,16.78572 24.9895,44.95799 24.9895,83.34377 0,38.38579 -19.1422,56.27267 -19.1422,56.27267 l 37.3249,1.30601 c 0,0 35.3553,-7.07102 35.3553,-57.57868 0,-50.50765 -39.3959,-52.52795 -39.3959,-52.52795 0,0 -25.8789,-75.4473 -131.9449,-75.4473 -0.084,0 0.033,4.02235 0.033,4.02235 50.0512,2.85643 76.2511,21.70556 92.7802,40.60913 z"
+           id="path5321-0-7-0"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="csccscsccc" />
+      </g>
+    </g>
+  </g>
+</svg>
