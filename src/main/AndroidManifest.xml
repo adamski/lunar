@@ -2,7 +2,7 @@
     package="com.github.fxthomas.lunar">
 
     <application
-        android:icon="@drawable/android:star_big_on"
+        android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:debuggable="true">
 
