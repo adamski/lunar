@@ -13,7 +13,14 @@ object General {
   )
 
   val proguardSettings = Seq (
-    useProguard in Android := true
+    useProguard in Android := true,
+    proguardOptimizations in Android ++= Seq(
+      """-keep class com.github.fxthomas.lunar.** {
+           void set*(***);
+           *** get*();
+      }""",
+      "-keepattributes EnclosingMethod"
+    )
   )
 
   lazy val fullAndroidSettings =
