@@ -19,14 +19,39 @@
            android:orientation="vertical"
            android:layout_gravity="bottom|center" >
 
-            <TextView
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:gravity="center"
-              android:text="Yellow Submarine — The Beatles"
-              android:textColor="@color/white" />
+           <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:orientation="horizontal">
+
+              <TextView
+                android:id="@+id/song_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Yellow Submarine"
+                android:textColor="@color/white" />
+
+              <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=" — "
+                android:textColor="@color/white" />
+
+              <TextView
+                android:id="@+id/artist_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="The Beatles"
+                android:textColor="@color/white" />
+
+            </LinearLayout>
 
             <TextView
+              android:id="@+id/album_title"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:gravity="center"
@@ -43,6 +68,7 @@
          android:background="#ff000000">
 
          <ImageButton
+           android:id="@+id/btn_star"
            android:layout_width="wrap_content"
            android:layout_height="match_parent"
            android:src="@drawable/star"
@@ -50,6 +76,7 @@
            android:padding="15dp" />
 
          <ImageButton
+           android:id="@+id/btn_pause"
            android:layout_width="wrap_content"
            android:layout_height="match_parent"
            android:src="@drawable/pause"
@@ -57,6 +84,7 @@
            android:padding="15dp" />
 
          <ImageButton
+           android:id="@+id/btn_next"
            android:layout_width="wrap_content"
            android:layout_height="match_parent"
            android:src="@drawable/next"
