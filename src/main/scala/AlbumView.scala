@@ -4,6 +4,7 @@ import _root_.android.widget.ImageView
 import _root_.android.content.Context
 import _root_.android.content.res.Resources
 import _root_.android.graphics.{Paint, BitmapFactory, Path, Rect, RectF, Canvas, Color}
+import _root_.android.graphics.drawable.{Drawable, ColorDrawable}
 import _root_.android.util.AttributeSet
 
 class AlbumView(context: Context, attributes: AttributeSet)
@@ -71,6 +72,9 @@ extends ImageView(context, attributes) {
     }
 
     override def onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) = {
+      // Call super
+      super.onSizeChanged(w, h, oldw, oldh)
+
       // Update sizes
       width = w
       height = h
@@ -87,11 +91,8 @@ extends ImageView(context, attributes) {
       // Clipping circle
       clip.rewind
       clip.addCircle(centerX, centerY, imageSize/2, Path.Direction.CW)
-
-      // Call super
-      super.onSizeChanged(w, h, oldw, oldh)
     }
-    
+
     override def onDraw(canvas: Canvas) = {
       canvas.drawPath (progressbar, color_fill)
       canvas.clipPath(clip)

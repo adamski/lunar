@@ -15,7 +15,7 @@
 
          <LinearLayout
            android:layout_width="match_parent"
-           android:layout_height="wrap_content"
+           android:layout_height="match_parent"
            android:orientation="vertical"
            android:layout_gravity="bottom|center"
            android:weightSum="1" >
@@ -26,6 +26,8 @@
              android:layout_width="match_parent"
              android:layout_height="0dp"
              android:layout_weight="1"
+             android:scaleType="fitCenter"
+             android:adjustViewBounds="false"
              android:src="@drawable/album" />
 
            <!-- Playing song information -->
@@ -33,12 +35,14 @@
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:layout_gravity="center"
+             android:weightSum="1"
              android:orientation="horizontal">
 
               <TextView
                 android:id="@+id/song_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight=".5"
                 android:gravity="center"
                 android:text="Yellow Submarine"
                 android:textColor="@color/white" />
@@ -54,6 +58,7 @@
                 android:id="@+id/artist_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight=".5"
                 android:gravity="center"
                 android:text="The Beatles"
                 android:textColor="@color/white" />

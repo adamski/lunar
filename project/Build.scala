@@ -19,7 +19,8 @@ object General {
            void set*(***);
            *** get*();
       }""",
-      "-keepattributes EnclosingMethod"
+      "-keepattributes EnclosingMethod",
+      "-keep class scala.collection.SeqLike { public protected *; }"
     )
   )
 
