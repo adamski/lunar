@@ -50,6 +50,12 @@ extends ImageView(context, attributes) {
     black_fill.setARGB (255, 0, 0, 0) // Black
     black_fill.setAntiAlias (true)
 
+    // Black filled paint
+    private var darkgray_fill = new Paint
+    darkgray_fill.setStyle (Paint.Style.FILL)
+    darkgray_fill.setARGB (255, 50, 50, 50) // Dark Gray
+    darkgray_fill.setAntiAlias (true)
+
     // Setter/Getter for the background color
     def getColor = color_fill.getColor
     def setColor (c: Int) = {
@@ -94,10 +100,20 @@ extends ImageView(context, attributes) {
     }
 
     override def onDraw(canvas: Canvas) = {
+      // Draw progressbar
       canvas.drawPath (progressbar, color_fill)
-      canvas.clipPath(clip)
-      canvas.scale(imageScale, imageScale, centerX, centerY)
+
+      // Set the clip for the drawable
+      canvas.clipPath (clip)
+
+      // Fill the clip
+      canvas.drawPath (clip, darkgray_fill)
+
+      // Scale and draw the drawable
+      canvas.scale    (imageScale, imageScale, centerX, centerY)
       super.onDraw (canvas)
+
+      // Draw the small inner dot
       canvas.drawPath (inner, color_fill)
       canvas.drawPath (inner_small, black_fill)
     }
