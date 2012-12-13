@@ -114,7 +114,7 @@ with MediaPlayer.OnCompletionListener {
       PendingIntent.FLAG_UPDATE_CURRENT)
     val notif = new Notification
     notif.tickerText = playlist(currentSongIndex).title
-    notif.icon = R.drawable.ic_launcher
+    notif.icon = R.drawable.ic_status
     notif.flags |= Notification.FLAG_ONGOING_EVENT
     notif.setLatestEventInfo (
       getApplicationContext,
