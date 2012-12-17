@@ -14,7 +14,7 @@ extends ImageView(context, attributes) {
     private val imageScale = 0.8f
     private val innerScale = 0.083f
 
-    // Number between 0 and 1
+    // Number between 0 and 1 indicating progress
     private var _progress: Float = 0
 
     // Paths
@@ -110,7 +110,7 @@ extends ImageView(context, attributes) {
       canvas.drawPath (clip, darkgray_fill)
 
       // Scale and draw the drawable
-      canvas.scale    (imageScale, imageScale, centerX, centerY)
+      canvas.scale (imageScale, imageScale, centerX, centerY)
       super.onDraw (canvas)
 
       // Draw the small inner dot

@@ -32,6 +32,12 @@ with MediaPlayer.OnCompletionListener {
   private var playlist = MutableList[Song]()
   private var uri = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI
   private var currentSongIndex = 0
+
+  def currentSong = {
+    if (currentSongIndex >= 0 && currentSongIndex < playlist.length)
+      Some(playlist(currentSongIndex))
+    else None
+  }
   
   // Accessible variables
   private var listener: Option[PlayerService.PlayerListener] = None
@@ -82,14 +88,15 @@ with MediaPlayer.OnCompletionListener {
         resume
       case ACTION_NEXT =>
         next
+      case _ => {}
     }
 
     return 0
   }
 
   override def onDestroy = {
-    mediaPlayer.release
     listener.foreach(_.onStop(this))
+    mediaPlayer.release
   }
 
   /*************************
@@ -118,7 +125,7 @@ with MediaPlayer.OnCompletionListener {
     notif.flags |= Notification.FLAG_ONGOING_EVENT
     notif.setLatestEventInfo (
       getApplicationContext,
-      "Lunar", "Playing " + playlist(currentSongIndex).title,
+      "Lunar", s"${playlist(currentSongIndex).artist.name} — ${playlist(currentSongIndex).title}",
       pendingIntent)
     notif
   }
