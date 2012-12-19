@@ -117,7 +117,11 @@ with PlayerService.PlayerListener {
 
   override def onBackPressed = {
     if (wheelShown) hideWheel
-    else super.onBackPressed
+    else {
+      if (playerService != null && !playerService.isPlaying)
+        stopService (new Intent(getApplicationContext, classOf[PlayerService]))
+      super.onBackPressed
+    }
   }
 
   def connectService = {
