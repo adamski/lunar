@@ -17,7 +17,8 @@ import _root_.android.net.Uri
 
 class PlayerActivity extends Activity
 with TypedActivity
-with PlayerService.PlayerListener {
+with PlayerService.PlayerListener
+with WheelView.Listener {
 
   private var wheelShown = false
 
@@ -30,6 +31,10 @@ with PlayerService.PlayerListener {
     }
   }
   private val progressUpdateHandler = new ProgressUpdateHandler
+
+  def onSliceClick (i: Int) = {
+    if (playerService != null) playerService.setCurrentMood(i)
+  }
 
   override def onStop (service: PlayerService) = {
     findView(TR.album_view).setProgress(0f)
@@ -97,6 +102,7 @@ with PlayerService.PlayerListener {
     })
 
     findView(TR.wheel_view).setVisibility(View.GONE)
+    findView(TR.wheel_view).setListener(this)
 
     connectService
   }

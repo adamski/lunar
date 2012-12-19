@@ -1,6 +1,6 @@
 package com.github.fxthomas.lunar
 
-import _root_.android.view.View
+import _root_.android.view.{View, MotionEvent}
 import _root_.android.content.Context
 import _root_.android.content.res.Resources
 import _root_.android.graphics.{Paint, BitmapFactory, Path, Rect, RectF, Canvas, Color}
@@ -8,11 +8,13 @@ import _root_.android.graphics.drawable.{Drawable, ColorDrawable}
 import _root_.android.util.{Log, AttributeSet}
 import _root_.android.animation.{Animator, AnimatorSet, ObjectAnimator}
 
-import scala.math.{sin, cos}
+import scala.math.{sin, cos, atan2}
 
 class WheelView(context: Context, attributes: AttributeSet)
 extends View(context, attributes) {
-  val default_colors = List(
+  import WheelView._
+
+  private val default_colors = List(
     R.color.wheel_blue,
     R.color.light_gray,
     R.color.wheel_purple,
@@ -21,9 +23,13 @@ extends View(context, attributes) {
     R.color.wheel_red
   )
 
-  val colors: List[Int] = (0 to default_colors.length-1).toList.map(
+  private var _listener: Option[Listener] = None
+  def setListener (l: Listener) = _listener = Option(l)
+
+  private val colors: List[Int] = (0 to default_colors.length-1).toList.map(
     s => attributes.getAttributeResourceValue(
       "fx", "color_$s", context.getResources.getColor(default_colors(s))))
+  private var selectionAngle: Option[Float] = None
 
   // View styles
   private val imageScale = 0.8f
@@ -62,11 +68,17 @@ extends View(context, attributes) {
     val ac = 3.14159265f * (startAngle + sweepAngle*.5f) / 180f
     val xo = (.5f * innerSize * cos(ac)).asInstanceOf[Float]
     val yo = (.5f * innerSize * sin(ac)).asInstanceOf[Float]
+    val ws = selectionAngle match {
+      case None => wheelSize
+      case Some(a) =>
+        if (a > startAngle && a < startAngle+sweepAngle) wheelSize*1.2f
+        else wheelSize
+    }
 
     val path = new Path
     path.addArc(new RectF(
-      centerX - wheelSize/2 + xo, centerY - wheelSize/2 + yo,
-      centerX + wheelSize/2 + xo, centerY + wheelSize/2 + yo
+      centerX - ws/2 + xo, centerY - ws/2 + yo,
+      centerX + ws/2 + xo, centerY + ws/2 + yo
     ), startAngle, sweepAngle)
     path.lineTo(centerX + xo, centerY + yo)
     path
@@ -83,6 +95,29 @@ extends View(context, attributes) {
   darkgray_fill.setStyle (Paint.Style.FILL)
   darkgray_fill.setARGB (255, 50, 50, 50) // Dark Gray
   darkgray_fill.setAntiAlias (true)
+
+  override def onTouchEvent(m: MotionEvent): Boolean = {
+    val x = m.getX-centerX
+    val y = m.getY-centerY
+    val s = Some(180f * ((2f + atan2(y, x).asInstanceOf[Float] / 3.14159265f) % 2f))
+
+    m.getAction match {
+      case MotionEvent.ACTION_DOWN =>
+        selectionAngle = s
+      case MotionEvent.ACTION_MOVE =>
+        selectionAngle = s
+      case MotionEvent.ACTION_UP => {
+        selectionAngle.foreach (a => _listener.foreach(
+          l => l.onSliceClick((a * colors.length / 360f).asInstanceOf[Int])))
+        selectionAngle = None
+      }
+      case _ => {}
+    }
+
+    invalidate
+
+    return true
+  }
 
   override def onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) = {
     // Call super
@@ -133,5 +168,11 @@ extends View(context, attributes) {
       color_fill.setColor(colors(i))
       canvas.drawPath (wheelSlice(i*sweepAngle, sweepAngle), color_fill)
     }
+  }
+}
+
+object WheelView {
+  abstract trait Listener {
+    def onSliceClick (sliceNumber: Int)
   }
 }

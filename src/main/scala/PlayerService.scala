@@ -32,6 +32,12 @@ with MediaPlayer.OnCompletionListener {
   private var playlist = MutableList[Song]()
   private var uri = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI
   private var currentSongIndex = 0
+  private var currentMood = 0
+  
+  def setCurrentMood(m: Int) = {
+    Log.i ("Lunar", s"Setting current mood to $m")
+    currentMood = m
+  }
 
   def currentSong = {
     if (currentSongIndex >= 0 && currentSongIndex < playlist.length)
