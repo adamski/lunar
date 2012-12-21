@@ -103,6 +103,10 @@ with WheelView.Listener {
        def onClick(b: View) = next
     })
 
+    findView(TR.btn_star).setOnClickListener(new View.OnClickListener {
+       def onClick(b: View) = star
+    })
+
     findView(TR.album_view).setOnClickListener(new View.OnClickListener {
       def onClick(b: View) = showWheel
     })
@@ -139,6 +143,7 @@ with WheelView.Listener {
 
   def connectService = {
     val intent = new Intent(getApplicationContext, classOf[PlayerService])
+    intent.setAction (PlayerService.ACTION_PLAY)
     startService(intent)
     bindService(intent, playerServiceConnection, Context.BIND_ABOVE_CLIENT)
   }
@@ -147,28 +152,29 @@ with WheelView.Listener {
     unbindService (playerServiceConnection)
   }
 
+  def star = {
+    hideWheel
+    for (p <- playerService) p.star
+  }
+
   def play (uri: Uri) = {
     hideWheel
-    for (p <- playerService)
-      p.loadUri (uri)
+    for (p <- playerService) p.loadUri (uri)
   }
 
   def pause = {
     hideWheel
-    for (p <- playerService)
-      p.pause
+    for (p <- playerService) p.pause
   }
 
   def resume = {
     hideWheel
-    for (p <- playerService)
-      p.resume
+    for (p <- playerService) p.resume
   }
 
   def next = {
     hideWheel
-    for (p <- playerService)
-      p.next
+    for (p <- playerService) p.next
   }
 
   def togglePlaying = {

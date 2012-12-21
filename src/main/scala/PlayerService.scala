@@ -35,20 +35,24 @@ with MediaPlayer.OnCompletionListener {
   private val mediaPlayer = new MediaPlayer
   private var playlist = MutableList[Song]()
   private var uri = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI
-  private var currentSongIndex = 0
+  private var currentSongIndex = -1
   private var currentMood = 0
+  private var starPower = 1
+
+  // Convenience variables
+  var isLoading = false
 
   // Increment by song duration in database (in seconds)
   private def incrementBySongDuration = {
     for (s <- currentSong)
-      musicDatabase.incrementPlaytime (s, s.duration / 1000f)
+      musicDatabase.incrementPlaytime (s, starPower * s.duration / 1000f)
   }
 
   // Increment playtime in database (in seconds)
   private def incrementByPlayTime = {
     for (s <- currentSong)
       musicDatabase.incrementPlaytime (
-        s, mediaPlayer.getCurrentPosition.asInstanceOf[Float] / 1000f)
+        s, starPower * mediaPlayer.getCurrentPosition.asInstanceOf[Float] / 1000f)
   }
 
   def setCurrentMood(m: Int) = {
@@ -78,31 +82,40 @@ with MediaPlayer.OnCompletionListener {
    *************************/
 
   def cursorFromUri (uri: Uri): Future[Cursor] =
-    future(getApplicationContext.getContentResolver.query(uri, null, null,
-    null, null))
+    future {
+      isLoading = true
+      getApplicationContext.getContentResolver.query(uri, null, null, null, null)
+    }
 
-  def loadUri (uri: Uri) = cursorFromUri(uri) onSuccess { case data => {
-    currentSongIndex = 0
-    playlist.clear
-    playlist ++= Random.shuffle(Song.cursorToStream(data).toList)
-    playAt(currentSongIndex)
-  }}
+  def loadUri (uri: Uri): Unit =
+    cursorFromUri(uri) onSuccess {
+      case d => onPlaylistLoaded(d)}
 
   /*******************
    * Service methods *
    *******************/
 
-  override def onBind (intent: Intent): IBinder = binder
-
-  override def onCreate = {
-    loadUri(uri)
+  def onPlaylistLoaded (data: Cursor) = {
+    isLoading = false
+    currentSongIndex = -1
+    playlist.clear
+    playlist ++= Random.shuffle(Song.cursorToStream(data).toList)
+    next
   }
+
+  override def onBind (intent: Intent): IBinder = binder
 
   override def onStartCommand (intent: Intent, flags: Int, startId: Int): Int = {
     intent.getAction match {
       case ACTION_PLAY =>
-        uri = Uri.parse (intent.getStringExtra (EXTRA_URI))
-        loadUri (uri)
+        if (intent.hasExtra(EXTRA_URI)) {
+          uri = Uri.parse (intent.getStringExtra (EXTRA_URI))
+          loadUri (uri)
+        } else if (!mediaPlayer.isPlaying) {
+          if (currentSongIndex < 0) next
+          else resume
+        }
+
       case ACTION_PAUSE =>
         pause
       case ACTION_STOP =>
@@ -128,6 +141,9 @@ with MediaPlayer.OnCompletionListener {
    *************************/
 
   def onPrepared (player: MediaPlayer) = {
+    // Reset star power
+    starPower = 1
+
     // Start playback
     player.start
 
@@ -200,6 +216,8 @@ with MediaPlayer.OnCompletionListener {
     listener.foreach(_.onResumePlayer(this))
     startForeground(1, runningNotification)
   }
+
+  def star = starPower *= 2
 
   def togglePlaying = {
     if (mediaPlayer.isPlaying) pause
