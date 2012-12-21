@@ -24,8 +24,8 @@ with WheelView.Listener {
 
   private class ProgressUpdateHandler extends Handler {
     override def handleMessage (msg: Message) {
-      if (playerService != null && playerService.isPlaying) {
-        findView (TR.album_view).setProgress (playerService.currentProgress)
+      for (p <- playerService) if (p.isPlaying) {
+        findView (TR.album_view).setProgress (p.currentProgress)
         sendMessageDelayed (Message.obtain, 500)
       }
     }
@@ -33,24 +33,25 @@ with WheelView.Listener {
   private val progressUpdateHandler = new ProgressUpdateHandler
 
   def onSliceClick (i: Int) = {
-    if (playerService != null) playerService.setCurrentMood(i)
+    for (p <- playerService)
+      p.setCurrentMood(i)
   }
 
-  override def onStop (service: PlayerService) = {
+  override def onStopPlayer = {
     findView(TR.album_view).setProgress(0f)
   }
 
-  override def onPause (service: PlayerService) = {
+  override def onPausePlayer (service: PlayerService) = {
     findView (TR.album_view).setProgress(service.currentProgress)
     findView (TR.btn_pause).setImageResource (R.drawable.play)
   }
 
-  override def onResume (service: PlayerService) = {
+  override def onResumePlayer (service: PlayerService) = {
     findView (TR.btn_pause).setImageResource (R.drawable.pause)
     progressUpdateHandler.sendMessage (Message.obtain)
   }
 
-  override def onStartPlaying (service: PlayerService, song: Song) = {
+  override def onStartPlayer (service: PlayerService, song: Song) = {
     findView (TR.btn_pause).setImageResource (R.drawable.pause)
     findView (TR.album_view).setProgress(0f)
     findView(TR.album_view).setImageDrawable(song.album.getCover(this)
@@ -64,17 +65,22 @@ with WheelView.Listener {
     findView (TR.album_title).setText (song.album.title)
   }
 
-  private var playerService: PlayerService = null
+  private var playerService: Option[PlayerService] = None
   private val playerServiceConnection = new ServiceConnection() {
     def onServiceConnected(name: ComponentName, binder: IBinder) {
-      playerService = binder.asInstanceOf[PlayerService.PlayerServiceBinder].getService
-      playerService.setListener(PlayerActivity.this)
-      playerService.currentSong.foreach (s => onStartPlaying (playerService, s))
+      // Set the PlayerService object
+      playerService = Option(binder.asInstanceOf[PlayerService.PlayerServiceBinder].getService)
+
+      // And configure it
+      for (p <- playerService) {
+        p.setListener(PlayerActivity.this)
+        p.currentSong.foreach (s => onStartPlayer (p, s))
+      }
     }
 
     def onServiceDisconnected(name: ComponentName) {
-      playerService = null
-      onStop(null)
+      playerService = None
+      onStop
     }
   }
 
@@ -124,8 +130,9 @@ with WheelView.Listener {
   override def onBackPressed = {
     if (wheelShown) hideWheel
     else {
-      if (playerService != null && !playerService.isPlaying)
-        stopService (new Intent(getApplicationContext, classOf[PlayerService]))
+      for (p <- playerService) if (p.isPlaying)
+        stopService (new Intent(
+          getApplicationContext, classOf[PlayerService]))
       super.onBackPressed
     }
   }
@@ -142,31 +149,31 @@ with WheelView.Listener {
 
   def play (uri: Uri) = {
     hideWheel
-    if (playerService != null)
-      playerService.loadUri (uri)
+    for (p <- playerService)
+      p.loadUri (uri)
   }
 
   def pause = {
     hideWheel
-    if (playerService != null)
-      playerService.pause
+    for (p <- playerService)
+      p.pause
   }
 
   def resume = {
     hideWheel
-    if (playerService != null)
-      playerService.resume
+    for (p <- playerService)
+      p.resume
   }
 
   def next = {
     hideWheel
-    if (playerService != null)
-      playerService.next
+    for (p <- playerService)
+      p.next
   }
 
   def togglePlaying = {
     hideWheel
-    if (playerService != null)
-      playerService.togglePlaying
+    for (p <- playerService)
+      p.togglePlaying
   }
 }

@@ -38,14 +38,17 @@ with MediaPlayer.OnCompletionListener {
   private var currentSongIndex = 0
   private var currentMood = 0
 
+  // Increment by song duration in database (in seconds)
   private def incrementBySongDuration = {
     for (s <- currentSong)
-      musicDatabase.incrementPlaytime (s, s.duration)
+      musicDatabase.incrementPlaytime (s, s.duration / 1000f)
   }
+
+  // Increment playtime in database (in seconds)
   private def incrementByPlayTime = {
     for (s <- currentSong)
       musicDatabase.incrementPlaytime (
-        s, mediaPlayer.getCurrentPosition.asInstanceOf[Float])
+        s, mediaPlayer.getCurrentPosition.asInstanceOf[Float] / 1000f)
   }
 
   def setCurrentMood(m: Int) = {
@@ -116,7 +119,7 @@ with MediaPlayer.OnCompletionListener {
 
   override def onDestroy = {
     incrementByPlayTime
-    listener.foreach(_.onStop(this))
+    listener.foreach(_.onStopPlayer)
     mediaPlayer.release
   }
 
@@ -131,7 +134,7 @@ with MediaPlayer.OnCompletionListener {
     // Notify listener
     for (s <- currentSong;
          l <- listener)
-       l.onStartPlaying(this, s)
+       l.onStartPlayer(this, s)
 
     // Show notification
     startForeground (1, runningNotification)
@@ -181,20 +184,20 @@ with MediaPlayer.OnCompletionListener {
 
   def pause = {
     mediaPlayer.pause
-    listener.foreach(_.onPause(this))
+    listener.foreach(_.onPausePlayer(this))
     stopForeground(true)
   }
 
   def stop = {
     incrementByPlayTime
     mediaPlayer.stop
-    listener.foreach(_.onStop(this))
+    listener.foreach(_.onStopPlayer)
     stopForeground(true)
   }
 
   def resume = {
     mediaPlayer.start
-    listener.foreach(_.onResume(this))
+    listener.foreach(_.onResumePlayer(this))
     startForeground(1, runningNotification)
   }
 
@@ -242,10 +245,10 @@ object PlayerService {
   }
 
   trait PlayerListener {
-    def onStartPlaying(service: PlayerService, song: Song) = {}
-    def onPause(service: PlayerService) = {}
-    def onResume(service: PlayerService) = {}
-    def onError(service: PlayerService) = {}
-    def onStop(service: PlayerService) = {}
+    def onStartPlayer(service: PlayerService, song: Song) = {}
+    def onPausePlayer(service: PlayerService) = {}
+    def onResumePlayer(service: PlayerService) = {}
+    def onErrorPlayer(service: PlayerService) = {}
+    def onStopPlayer = {}
   }
 }
