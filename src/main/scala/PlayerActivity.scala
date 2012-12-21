@@ -33,8 +33,10 @@ with WheelView.Listener {
   private val progressUpdateHandler = new ProgressUpdateHandler
 
   def onSliceClick (i: Int) = {
-    for (p <- playerService)
+    for (p <- playerService) {
       p.setCurrentMood(i)
+      findView(TR.wheel_view).setSelectedSlice(i)
+    }
   }
 
   override def onStopPlayer = {
@@ -73,6 +75,7 @@ with WheelView.Listener {
 
       // And configure it
       for (p <- playerService) {
+        findView (TR.wheel_view).setSelectedSlice(p.currentMood)
         p.setListener(PlayerActivity.this)
         p.currentSong.foreach (s => onStartPlayer (p, s))
       }

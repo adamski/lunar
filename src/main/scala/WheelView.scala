@@ -23,6 +23,9 @@ extends View(context, attributes) {
     R.color.wheel_red
   )
 
+  private var _selectedSlice: Option[Int] = None
+  def setSelectedSlice (i: Int) = _selectedSlice = Option(i)
+
   private var _listener: Option[Listener] = None
   def setListener (l: Listener) = _listener = Option(l)
 
@@ -64,21 +67,15 @@ extends View(context, attributes) {
   private def centerY = height/2
 
   // Path for a part of the wheel
-  private def wheelSlice (startAngle: Float, sweepAngle: Float) = {
+  private def wheelSlice (startAngle: Float, sweepAngle: Float, size: Float) = {
     val ac = 3.14159265f * (startAngle + sweepAngle*.5f) / 180f
     val xo = (.5f * innerSize * cos(ac)).asInstanceOf[Float]
     val yo = (.5f * innerSize * sin(ac)).asInstanceOf[Float]
-    val ws = selectionAngle match {
-      case None => wheelSize
-      case Some(a) =>
-        if (a > startAngle && a < startAngle+sweepAngle) wheelSize*1.2f
-        else wheelSize
-    }
 
     val path = new Path
     path.addArc(new RectF(
-      centerX - ws/2 + xo, centerY - ws/2 + yo,
-      centerX + ws/2 + xo, centerY + ws/2 + yo
+      centerX - size/2 + xo, centerY - size/2 + yo,
+      centerX + size/2 + xo, centerY + size/2 + yo
     ), startAngle, sweepAngle)
     path.lineTo(centerX + xo, centerY + yo)
     path
@@ -165,8 +162,24 @@ extends View(context, attributes) {
     // Draw arcs
     val sweepAngle = 360f/colors.length
     for (i <- 0 to colors.length-1) {
+      // Compute angles
+      val startAngle = i*sweepAngle
+
+      // Compute size of the slice
+      val size = (_selectedSlice, selectionAngle) match {
+        // If a slice is selected
+        case (Some(s), None) if (i == s) => wheelSize*1.2f
+
+        // If the user touches the wheel
+        case (_, Some(a)) if (a > startAngle && a < startAngle + sweepAngle)
+        => wheelSize*1.2f
+
+        // All other cases
+        case _ => wheelSize
+      }
+
       color_fill.setColor(colors(i))
-      canvas.drawPath (wheelSlice(i*sweepAngle, sweepAngle), color_fill)
+      canvas.drawPath (wheelSlice(i*sweepAngle, sweepAngle, size), color_fill)
     }
   }
 }

@@ -18,10 +18,10 @@ extends SQLiteOpenHelper(context, "playerdata", null, 1) {
 
   // SQL query for creating the "songs" table
   private def QUERY_CREATE_TABLE_SONGS =
-    "CREATE TABLE songs (uri TEXT PRIMARY KEY, playtime REAL);"
+    "CREATE TABLE songs (uri TEXT, mood INTEGER, playtime REAL, PRIMARY KEY (uri, mood));"
 
-  private def QUERY_INCREMENT_PLAYTIME (uri: String, incr: Float) =
-    s"UPDATE songs SET playtime=(playtime + $incr) WHERE uri='${uri}'"
+  private def QUERY_INCREMENT_PLAYTIME (uri: String, mood: Int, incr: Float) =
+    s"UPDATE songs SET playtime=(playtime + $incr) WHERE uri='${uri}' AND mood=$mood"
 
   override def onCreate (db: SQLiteDatabase) = {
     db.execSQL (QUERY_CREATE_TABLE_SONGS)
@@ -29,10 +29,11 @@ extends SQLiteOpenHelper(context, "playerdata", null, 1) {
 
   override def onUpgrade (db: SQLiteDatabase, oldVer: Int, newVer: Int) = {}
 
-  def incrementPlaytime (s: Song, incr: Float) = {
+  def incrementPlaytime (s: Song, mood: Int, incr: Float) = {
     // Prepare values
     val cv = new ContentValues
     cv.put ("uri", s.uriString)
+    cv.put ("mood", Int.box(mood))
     cv.put ("playtime", Float.box(0f))
 
     // Start transaction
@@ -41,7 +42,7 @@ extends SQLiteOpenHelper(context, "playerdata", null, 1) {
 
     try {
       db.insertWithOnConflict ("songs", null, cv, SQLiteDatabase.CONFLICT_IGNORE)
-      db.execSQL (QUERY_INCREMENT_PLAYTIME(s.uriString, incr))
+      db.execSQL (QUERY_INCREMENT_PLAYTIME(s.uriString, mood, incr))
       db.setTransactionSuccessful
     } finally db.endTransaction
   }

@@ -36,23 +36,23 @@ with MediaPlayer.OnCompletionListener {
   private var playlist = MutableList[Song]()
   private var uri = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI
   private var currentSongIndex = -1
-  private var currentMood = 0
   private var starPower = 1
 
-  // Convenience variables
+  // Public variables
+  var currentMood = 0
   var isLoading = false
 
   // Increment by song duration in database (in seconds)
   private def incrementBySongDuration = {
     for (s <- currentSong)
-      musicDatabase.incrementPlaytime (s, starPower * s.duration / 1000f)
+      musicDatabase.incrementPlaytime (s, currentMood, starPower * s.duration / 1000f)
   }
 
   // Increment playtime in database (in seconds)
   private def incrementByPlayTime = {
     for (s <- currentSong)
       musicDatabase.incrementPlaytime (
-        s, starPower * mediaPlayer.getCurrentPosition.asInstanceOf[Float] / 1000f)
+        s, currentMood, starPower * mediaPlayer.getCurrentPosition.asInstanceOf[Float] / 1000f)
   }
 
   def setCurrentMood(m: Int) = {
