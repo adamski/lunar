@@ -111,7 +111,7 @@ with MediaPlayer.OnCompletionListener {
         if (intent.hasExtra(EXTRA_URI)) {
           uri = Uri.parse (intent.getStringExtra (EXTRA_URI))
           loadUri (uri)
-        } else if (!mediaPlayer.isPlaying) {
+        } else if (!isPlaying) {
           if (currentSongIndex < 0) next
           else resume
         }
@@ -187,10 +187,14 @@ with MediaPlayer.OnCompletionListener {
    ****************************/
 
   def play (song: Song) = {
-    mediaPlayer.reset
-    mediaPlayer.setAudioStreamType (AudioManager.STREAM_MUSIC)
-    mediaPlayer.setDataSource (getApplicationContext, song.uri)
-    mediaPlayer.prepareAsync
+    try {
+      mediaPlayer.reset
+      mediaPlayer.setAudioStreamType (AudioManager.STREAM_MUSIC)
+      mediaPlayer.setDataSource (getApplicationContext, song.uri)
+      mediaPlayer.prepareAsync
+    } catch { case e: IllegalStateException =>
+      Log.w("PlayerService", "Exception occured: " + e.getMessage)
+    }
   }
 
   def playAt (index: Int) = {
@@ -199,36 +203,55 @@ with MediaPlayer.OnCompletionListener {
   }
 
   def pause = {
-    mediaPlayer.pause
-    listener.foreach(_.onPausePlayer(this))
-    stopForeground(true)
+    try {
+      mediaPlayer.pause
+      listener.foreach(_.onPausePlayer(this))
+      stopForeground(true)
+    } catch { case e: IllegalStateException =>
+      Log.w("PlayerService", "Exception occured: " + e.getMessage)
+    }
   }
 
   def stop = {
-    incrementByPlayTime
-    mediaPlayer.stop
-    listener.foreach(_.onStopPlayer)
-    stopForeground(true)
+    try {
+      incrementByPlayTime
+      mediaPlayer.stop
+      listener.foreach(_.onStopPlayer)
+      stopForeground(true)
+    } catch { case e: IllegalStateException =>
+      Log.w("PlayerService", "Exception occured: " + e.getMessage)
+    }
   }
 
   def resume = {
-    mediaPlayer.start
-    listener.foreach(_.onResumePlayer(this))
-    startForeground(1, runningNotification)
+    try {
+      mediaPlayer.start
+      listener.foreach(_.onResumePlayer(this))
+      startForeground(1, runningNotification)
+    } catch { case e: IllegalStateException =>
+      Log.w("PlayerService", "Exception occured: " + e.getMessage)
+    }
   }
 
   def star = starPower *= 2
 
   def togglePlaying = {
-    if (mediaPlayer.isPlaying) pause
+    if (isPlaying) pause
     else resume
   }
 
   def next = {
-    if (playlist.length == 0) {
-      loadUri (MediaStore.Audio.Media.EXTERNAL_CONTENT_URI)
-    }
+    // Increment playing time
+    if (isPlaying) incrementByPlayTime
 
+    // Reset media player
+    mediaPlayer.reset
+
+    // Load URI if nothing is in the playlist
+    if (playlist.length == 0)
+      loadUri (MediaStore.Audio.Media.EXTERNAL_CONTENT_URI)
+
+    // If there's something in the playlist, we can play it immediately
     if (playlist.length > 0) {
       currentSongIndex = (currentSongIndex + 1) % playlist.length
       playAt (currentSongIndex)
@@ -245,7 +268,7 @@ with MediaPlayer.OnCompletionListener {
     mediaPlayer.getDuration - mediaPlayer.getCurrentPosition
   }
 
-  def isPlaying = mediaPlayer.isPlaying
+  def isPlaying = try mediaPlayer.isPlaying catch { case _: Throwable => false }
 }
 
 object PlayerService {

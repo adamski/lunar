@@ -8,6 +8,7 @@ import _root_.android.graphics.{Bitmap, BitmapFactory}
 import _root_.android.provider.{MediaStore, BaseColumns}
 import _root_.android.provider.MediaStore.Audio.AudioColumns
 import _root_.android.provider.MediaStore.MediaColumns
+import _root_.android.util.Log
 
 import scala.reflect
 
@@ -62,9 +63,18 @@ case class Album(title: String, id: Long, key: String) {
     } catch {
 
       // If the cover is not found, then return None
-      case e: java.io.FileNotFoundException => None
+      case e: java.io.FileNotFoundException => {
+        Log.w ("Music", s"Exception when reading cover image: ${e.getMessage}")
+        None
+      }
+
+      // If we encountered a security exception
+      case e: java.lang.SecurityException => {
+        Log.w ("Music", s"Exception when reading cover image: ${e.getMessage}")
+        None
+      }
     }
-  }
+  } 
 }
 
 case class Artist(name: String, id: Long, key: String)
@@ -77,7 +87,11 @@ case class Song(
   duration: Long,
   uriString: String
 ) {
-  lazy val uri = Uri.parse(uriString)
+  lazy val uri = {
+    val b = new Uri.Builder
+    b.appendPath(uriString)
+    b.build
+  }
 }
 
 object Song {
