@@ -1,12 +1,50 @@
 package com.github.fxthomas.lunar
 
 import _root_.android.database.Cursor
+import _root_.android.database.sqlite.{SQLiteOpenHelper, SQLiteDatabase}
 import _root_.android.net.Uri
-import _root_.android.content.{Context, ContentUris}
+import _root_.android.content.{Context, ContentUris, ContentValues}
 import _root_.android.graphics.{Bitmap, BitmapFactory}
 import _root_.android.provider.{MediaStore, BaseColumns}
 import _root_.android.provider.MediaStore.Audio.AudioColumns
 import _root_.android.provider.MediaStore.MediaColumns
+
+import scala.reflect
+
+// Creates a database called "playerdata" at version 1
+class PlayerDataOpenHelper(context: Context)
+extends SQLiteOpenHelper(context, "playerdata", null, 1) {
+
+  // SQL query for creating the "songs" table
+  private def QUERY_CREATE_TABLE_SONGS =
+    "CREATE TABLE songs (uri TEXT PRIMARY KEY, playtime REAL);"
+
+  private def QUERY_INCREMENT_PLAYTIME (uri: String, incr: Float) =
+    s"UPDATE songs SET playtime=(playtime + $incr) WHERE uri='${uri}'"
+
+  override def onCreate (db: SQLiteDatabase) = {
+    db.execSQL (QUERY_CREATE_TABLE_SONGS)
+  }
+
+  override def onUpgrade (db: SQLiteDatabase, oldVer: Int, newVer: Int) = {}
+
+  def incrementPlaytime (s: Song, incr: Float) = {
+    // Prepare values
+    val cv = new ContentValues
+    cv.put ("uri", s.uriString)
+    cv.put ("playtime", Float.box(0f))
+
+    // Start transaction
+    val db = getWritableDatabase
+    db.beginTransaction
+
+    try {
+      db.insertWithOnConflict ("songs", null, cv, SQLiteDatabase.CONFLICT_IGNORE)
+      db.execSQL (QUERY_INCREMENT_PLAYTIME(s.uriString, incr))
+      db.setTransactionSuccessful
+    } finally db.endTransaction
+  }
+}
 
 case class Album(title: String, id: Long, key: String) {
   def getCover (context: Context): Option[Bitmap] = {

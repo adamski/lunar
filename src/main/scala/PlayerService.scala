@@ -26,6 +26,10 @@ with MediaPlayer.OnCompletionListener {
    * Private variables *
    *********************/
 
+  // Music database (lazy because it needs to be loaded after onCreate)
+  private lazy val musicDatabase = new
+    PlayerDataOpenHelper(getApplicationContext)
+
   // Declare variables
   private val binder = new PlayerServiceBinder(this)
   private val mediaPlayer = new MediaPlayer
@@ -33,7 +37,17 @@ with MediaPlayer.OnCompletionListener {
   private var uri = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI
   private var currentSongIndex = 0
   private var currentMood = 0
-  
+
+  private def incrementBySongDuration = {
+    for (s <- currentSong)
+      musicDatabase.incrementPlaytime (s, s.duration)
+  }
+  private def incrementByPlayTime = {
+    for (s <- currentSong)
+      musicDatabase.incrementPlaytime (
+        s, mediaPlayer.getCurrentPosition.asInstanceOf[Float])
+  }
+
   def setCurrentMood(m: Int) = {
     Log.i ("Lunar", s"Setting current mood to $m")
     currentMood = m
@@ -101,6 +115,7 @@ with MediaPlayer.OnCompletionListener {
   }
 
   override def onDestroy = {
+    incrementByPlayTime
     listener.foreach(_.onStop(this))
     mediaPlayer.release
   }
@@ -114,7 +129,9 @@ with MediaPlayer.OnCompletionListener {
     player.start
 
     // Notify listener
-    listener.foreach (_.onStartPlaying(this, playlist(currentSongIndex)))
+    for (s <- currentSong;
+         l <- listener)
+       l.onStartPlaying(this, s)
 
     // Show notification
     startForeground (1, runningNotification)
@@ -137,6 +154,7 @@ with MediaPlayer.OnCompletionListener {
   }
 
   def onCompletion (player: MediaPlayer) = {
+    incrementBySongDuration
     next
   }
 
@@ -168,6 +186,7 @@ with MediaPlayer.OnCompletionListener {
   }
 
   def stop = {
+    incrementByPlayTime
     mediaPlayer.stop
     listener.foreach(_.onStop(this))
     stopForeground(true)
