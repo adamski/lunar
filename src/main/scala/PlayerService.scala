@@ -99,7 +99,7 @@ with MediaPlayer.OnCompletionListener {
     isLoading = false
     currentSongIndex = -1
     playlist.clear
-    playlist ++= Random.shuffle(Song.cursorToStream(data).toList)
+    playlist ++= Random.shuffle(Song.cursorToStream(data).toList filter (_.is_music))
     next
   }
 

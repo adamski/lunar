@@ -82,6 +82,7 @@ case class Artist(name: String, id: Long, key: String)
 
 case class Song(
   title: String,
+  is_music: Boolean,
   album: Album,
   artist: Artist,
   composer: String,
@@ -101,6 +102,7 @@ object Song {
     val c = List(
       MediaColumns.TITLE,
       MediaColumns.DATA,
+      AudioColumns.IS_MUSIC,
       AudioColumns.ALBUM,
       AudioColumns.ALBUM_ID,
       AudioColumns.ALBUM_KEY,
@@ -121,6 +123,7 @@ object Song {
       // 1. Create a Song object
       Song(
         cursor.getString(c(MediaColumns.TITLE)),
+        cursor.getInt(c(AudioColumns.IS_MUSIC)) == 1,
         Album(
           cursor.getString(c(AudioColumns.ALBUM)),
           cursor.getLong(c(AudioColumns.ALBUM_ID)),
