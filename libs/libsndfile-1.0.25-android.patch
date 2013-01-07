@@ -1,0 +1,22 @@
+--- libsndfile-1.0.25/programs/sndfile-play.c	2012-12-31 17:03:34.289908113 +0100
++++ libsndfile-1.0.25-patch/programs/sndfile-play.c	2012-12-31 17:04:05.326412364 +0100
+@@ -55,7 +55,7 @@
+ #if defined (__linux__) || defined (__FreeBSD_kernel__) || defined (__FreeBSD__)
+ 	#include 	<fcntl.h>
+ 	#include 	<sys/ioctl.h>
+-	#include 	<sys/soundcard.h>
++	#include 	<linux/soundcard.h>
+ 
+ #elif (defined (__MACH__) && defined (__APPLE__))
+ 	#include <Carbon.h>
+--- libsndfile-1.0.25/src/sndfile.c	2012-12-31 17:03:34.343241171 +0100
++++ libsndfile-1.0.25-patch/src/sndfile.c	2013-01-01 18:53:37.436544846 +0100
+@@ -309,7 +309,7 @@
+ {	SF_PRIVATE 	*psf ;
+ 
+ 	/* Ultimate sanity check. */
+-	assert (sizeof (sf_count_t) == 8) ;
++	/* assert (sizeof (sf_count_t) == 8) ; */
+ 
+ 	if ((psf = calloc (1, sizeof (SF_PRIVATE))) == NULL)
+ 	{	sf_errno = SFE_MALLOC_FAILED ;

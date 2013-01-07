@@ -2,3 +2,7 @@
 target/
 project/target/
 project/project/
+src/main/native/
+src/main/obj/
+src/main/libs/
+libs/*/

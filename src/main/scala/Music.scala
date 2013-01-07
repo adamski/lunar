@@ -94,6 +94,8 @@ case class Song(
     b.appendPath(uriString)
     b.build
   }
+
+  @native def computeBPM
 }
 
 object Song {

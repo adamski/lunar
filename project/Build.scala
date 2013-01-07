@@ -2,6 +2,7 @@ import sbt._
 
 import Keys._
 import AndroidKeys._
+import AndroidNdkKeys._
 
 object General {
   val settings = Defaults.defaultSettings ++ Seq (
@@ -24,11 +25,18 @@ object General {
     )
   )
 
+  val ndkSettings = Seq(
+    jniClasses in Android += "com.github.fxthomas.lunar.Song",
+    javahOutputFile in Android := Some(new File("native.h"))
+  )
+
   lazy val fullAndroidSettings =
     General.settings ++
     AndroidProject.androidSettings ++
+    AndroidNdk.settings ++
     TypedResources.settings ++
     proguardSettings ++
+    ndkSettings ++
     AndroidManifestGenerator.settings ++
     AndroidMarketPublish.settings ++ Seq (
       keyalias in Android := "change-me",
