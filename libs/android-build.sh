@@ -3,10 +3,6 @@
 # Taken and improved from :
 # http://cmumobileapps.com/2011/08/31/compiling-open-source-libraries-with-android-ndk-part-2
 
-# The designation for the host, usually "linux-x86" for standard linuxes, and
-# "darwin-x86" for OSX.
-HOST="linux-x86"
-
 # The target architecture. Here we're compiling for ARM using GCC 4.7 and
 # platform version 14.
 TARGET_ARCH="arm"
@@ -16,7 +12,7 @@ TARGET_GCC_VERSION="4.7"
 TARGET_NDK_VERSION="14"
 
 # Add the toolchain to the path to be able to use the ARM compiler.
-export PATH="$ANDROID_NDK/toolchains/$TARGET_TOOLCHAIN-$TARGET_GCC_VERSION/prebuilt/$HOST/bin:$PATH"
+export PATH="$ANDROID_NDK/toolchains/$TARGET_TOOLCHAIN-$TARGET_GCC_VERSION/prebuilt/$ANDROID_NDK_HOST/bin:$PATH"
 
 # Where to find the platform-specific files?
 export SYS_ROOT="$ANDROID_NDK/platforms/android-$TARGET_NDK_VERSION/arch-$TARGET_ARCH/"
