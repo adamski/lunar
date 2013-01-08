@@ -11,5 +11,10 @@
  */
 
 #include <aubio/aubio.h>
+#include <android/log.h>
+#include "native.h"
 
-
+JNIEXPORT void JNICALL Java_com_github_fxthomas_lunar_Song_00024_computeBPM
+  (JNIEnv *jenv, jobject jself, jbyteArray jaudiodata) {
+    __android_log_write (ANDROID_LOG_ERROR, "Aubio", "Trying song");
+}

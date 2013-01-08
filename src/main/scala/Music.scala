@@ -17,11 +17,11 @@ class PlayerDataOpenHelper(context: Context)
 extends SQLiteOpenHelper(context, "playerdata", null, 1) {
 
   // SQL query for creating the "songs" table
-  private def QUERY_CREATE_TABLE_SONGS =
+  private val QUERY_CREATE_TABLE_SONGS =
     "CREATE TABLE songs (uri TEXT, mood INTEGER, playtime REAL, PRIMARY KEY (uri, mood));"
 
-  private def QUERY_INCREMENT_PLAYTIME (uri: String, mood: Int, incr: Float) =
-    s"UPDATE songs SET playtime=(playtime + $incr) WHERE uri='${uri}' AND mood=$mood"
+  private val QUERY_INCREMENT_PLAYTIME =
+    "UPDATE songs SET playtime=(playtime + ?) WHERE uri = ? AND mood = ?;"
 
   override def onCreate (db: SQLiteDatabase) = {
     db.execSQL (QUERY_CREATE_TABLE_SONGS)
@@ -42,7 +42,8 @@ extends SQLiteOpenHelper(context, "playerdata", null, 1) {
 
     try {
       db.insertWithOnConflict ("songs", null, cv, SQLiteDatabase.CONFLICT_IGNORE)
-      db.execSQL (QUERY_INCREMENT_PLAYTIME(s.uriString, mood, incr))
+      db.rawQuery(QUERY_INCREMENT_PLAYTIME,
+        Array(s.uriString, mood.toString, incr.toString))
       db.setTransactionSuccessful
     } finally db.endTransaction
   }
@@ -95,10 +96,16 @@ case class Song(
     b.build
   }
 
-  @native def computeBPM
+  Song.computeBPM (null)
 }
 
 object Song {
+  // Load audioproc library
+  System.loadLibrary("audioproc")
+
+  // Native methods
+  @native def computeBPM (data: Array[Byte])
+
   def cursorToStream (cursor: Cursor) = {
     // Convert the list of columns into a dictionary (name => index)
     val c = List(

@@ -26,7 +26,7 @@ object General {
   )
 
   val ndkSettings = Seq(
-    jniClasses in Android += "com.github.fxthomas.lunar.Song",
+    jniClasses in Android += "com.github.fxthomas.lunar.Song$",
     javahOutputFile in Android := Some(new File("native.h"))
   )
 

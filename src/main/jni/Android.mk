@@ -30,12 +30,16 @@ LOCAL_MODULE := audioproc
 
 # Add includes
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../native/include/
+LOCAL_C_INCLUDES += $(SBT_MANAGED_JNI_INCLUDE)
 
 # Add source files
 LOCAL_SRC_FILES := functions.c
 
 # Add static libraries
 LOCAL_STATIC_LIBRARIES := aubio
+
+# Add local libraries
+LOCAL_LDLIBS := -L$(SYSROOT)/usr/lib -llog
 
 include $(BUILD_SHARED_LIBRARY)
 # -----------------------------------
