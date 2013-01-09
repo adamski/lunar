@@ -7,6 +7,7 @@ import ExecutionContext.Implicits.global
 
 import _root_.android.app.{Service, Notification, PendingIntent}
 import _root_.android.media.{MediaPlayer, AudioManager}
+import _root_.android.media.audiofx.Visualizer
 import _root_.android.net.Uri
 import _root_.android.os.{Binder, IBinder, Bundle}
 import _root_.android.util.Log
@@ -18,7 +19,8 @@ class PlayerService
 extends Service
 with MediaPlayer.OnPreparedListener
 with MediaPlayer.OnErrorListener
-with MediaPlayer.OnCompletionListener {
+with MediaPlayer.OnCompletionListener
+with Visualizer.OnDataCaptureListener {
 
   import PlayerService._
 
@@ -37,6 +39,9 @@ with MediaPlayer.OnCompletionListener {
   private var uri = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI
   private var currentSongIndex = -1
   private var starPower = 1
+
+  // Prepare visualizer
+  private val visualizer = new Visualizer(0)
 
   // Public variables
   var currentMood = 0
@@ -65,7 +70,7 @@ with MediaPlayer.OnCompletionListener {
       Some(playlist(currentSongIndex))
     else None
   }
-  
+
   // Accessible variables
   private var listener: Option[PlayerService.PlayerListener] = None
   def setListener(l: PlayerService.PlayerListener) = {
@@ -76,6 +81,13 @@ with MediaPlayer.OnCompletionListener {
   mediaPlayer.setOnPreparedListener (this)
   mediaPlayer.setOnErrorListener (this)
   mediaPlayer.setOnCompletionListener (this)
+
+  // Visualizer output
+  def onFftDataCapture(v: Visualizer, fft: Array[Byte], samplingRate: Int) = {}
+  def onWaveFormDataCapture(v: Visualizer, waveform: Array[Byte], samplingRate: Int) = {
+    Log.i ("Aubio", s"Sending data to native, sampling rate is $samplingRate")
+    Song.computeBPM (waveform)
+  }
 
   /*************************
    * LoaderManager methods *
@@ -134,6 +146,7 @@ with MediaPlayer.OnCompletionListener {
     incrementByPlayTime
     listener.foreach(_.onStopPlayer)
     mediaPlayer.release
+    visualizer.release
   }
 
   /*************************
@@ -146,6 +159,9 @@ with MediaPlayer.OnCompletionListener {
 
     // Start playback
     player.start
+
+    // Start visualizer
+    visualizerStart
 
     // Notify listener
     for (s <- currentSong;
@@ -173,11 +189,13 @@ with MediaPlayer.OnCompletionListener {
   }
 
   def onCompletion (player: MediaPlayer) = {
+    visualizer.setEnabled(false)
     incrementBySongDuration
     next
   }
 
   def onError (player: MediaPlayer, what: Int, extra: Int) = {
+    visualizer.setEnabled(false)
     Log.e ("PlayerService", "Error while playing")
     true
   }
@@ -186,65 +204,150 @@ with MediaPlayer.OnCompletionListener {
    * Player interface methods *
    ****************************/
 
+  /**
+   * Start the BPM counter
+   */
+  private def visualizerStart = {
+    if (!visualizer.getEnabled) {
+      Log.i ("Aubio", "Enabling BPM counter")
+      visualizer.setDataCaptureListener(this, Visualizer.getMaxCaptureRate/4, true, false)
+      visualizer.setEnabled(true)
+    }
+  }
+
+  /**
+   * Stop the BPM counter
+   */
+  private def visualizerStop = {
+    if (visualizer.getEnabled) {
+      Log.i ("Aubio", "Disabling BPM counter")
+      visualizer.setDataCaptureListener(null, 0, false, false)
+      visualizer.setEnabled(false)
+    }
+  }
+
+  /**
+   * Play `song`
+   */
   def play (song: Song) = {
     try {
+      // Stop the BPM counter
+      visualizerStop
+
+      // Reset the media player
       mediaPlayer.reset
+
+      // Set the media source
       mediaPlayer.setAudioStreamType (AudioManager.STREAM_MUSIC)
       mediaPlayer.setDataSource (getApplicationContext, song.uri)
+
+      // Prepare the media player
       mediaPlayer.prepareAsync
+
     } catch { case e: IllegalStateException =>
       Log.w("PlayerService", "Exception occured: " + e.getMessage)
     }
   }
 
+  /**
+   * Play song at `index` in the current playlist
+   */
   def playAt (index: Int) = {
     if (index >= 0 && index < playlist.length)
       play (playlist(index))
   }
 
+  /**
+   * Pause the media player
+   */
   def pause = {
     try {
+      // Stop the BPM counter
+      visualizerStop
+
+      // Pause the media player
       mediaPlayer.pause
+
+      // Notify the listener
       listener.foreach(_.onPausePlayer(this))
+
+      // Disable notifications
       stopForeground(true)
+
     } catch { case e: IllegalStateException =>
       Log.w("PlayerService", "Exception occured: " + e.getMessage)
     }
   }
 
+  /**
+   * Stop the media player
+   */
   def stop = {
     try {
+      // Update the play time
       incrementByPlayTime
+
+      // Stop the BPM counter
+      visualizerStop
+
+      // Stop the media player
       mediaPlayer.stop
+
+      // Notify the listener
       listener.foreach(_.onStopPlayer)
+
+      // Disable notifications
       stopForeground(true)
+
     } catch { case e: IllegalStateException =>
       Log.w("PlayerService", "Exception occured: " + e.getMessage)
     }
   }
 
+  /**
+   * Resume the media player
+   */
   def resume = {
     try {
+      // Start media player
       mediaPlayer.start
+
+      // Start BPM counter
+      visualizerStart
+
+      // Notify the listener
       listener.foreach(_.onResumePlayer(this))
+
+      // Show notification
       startForeground(1, runningNotification)
+
     } catch { case e: IllegalStateException =>
       Log.w("PlayerService", "Exception occured: " + e.getMessage)
     }
   }
 
+  /**
+   * Make the current song count twice more!
+   */
   def star = starPower *= 2
 
+  /**
+   * Pause/Resume button
+   */
   def togglePlaying = {
     if (isPlaying) pause
     else resume
   }
 
+  /**
+   * Play next song
+   */
   def next = {
     // Increment playing time
     if (isPlaying) incrementByPlayTime
 
     // Reset media player
+    visualizer.setEnabled(false)
     mediaPlayer.reset
 
     // Load URI if nothing is in the playlist
@@ -258,16 +361,25 @@ with MediaPlayer.OnCompletionListener {
     }
   }
 
+  /**
+   * Returns current progress as a float between 0 (beginning) and 1 (end)
+   */
   def currentProgress = {
     if (mediaPlayer.getDuration > 0) {
       mediaPlayer.getCurrentPosition.asInstanceOf[Float]/mediaPlayer.getDuration.asInstanceOf[Float]
     } else 0f
   }
 
+  /**
+   * Returns the time left until the end of the song (in ms)
+   */
   def timeLeft = {
     mediaPlayer.getDuration - mediaPlayer.getCurrentPosition
   }
 
+  /**
+   * `true` is the media player is playing, `false` otherwise
+   */
   def isPlaying = try mediaPlayer.isPlaying catch { case _: Throwable => false }
 }
 

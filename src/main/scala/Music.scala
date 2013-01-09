@@ -95,8 +95,6 @@ case class Song(
     b.appendPath(uriString)
     b.build
   }
-
-  Song.computeBPM (null)
 }
 
 object Song {

@@ -16,5 +16,17 @@
 
 JNIEXPORT void JNICALL Java_com_github_fxthomas_lunar_Song_00024_computeBPM
   (JNIEnv *jenv, jobject jself, jbyteArray jaudiodata) {
-    __android_log_write (ANDROID_LOG_ERROR, "Aubio", "Trying song");
+    __android_log_print (ANDROID_LOG_INFO, "Aubio", "Computing BPM");
+
+    // Read input data
+    jbyte *audiodata = jenv->GetByteArrayElements (jaudiodata, NULL);
+    jsize audiolength = jenv->GetArrayLength (jaudiodata);
+    __android_log_print (ANDROID_LOG_INFO, "Aubio", "Got byte[%d] from Java", audiolength);
+
+    //fvec_t *ibuf = new_fvec ();
+
+    // Release input data
+    jenv->ReleaseByteArrayElements(jaudiodata, audiodata, JNI_ABORT);
+
+    __android_log_print (ANDROID_LOG_INFO, "Aubio", "BPM computed!");
 }

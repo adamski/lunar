@@ -33,7 +33,7 @@ LOCAL_C_INCLUDES := $(LOCAL_PATH)/../native/include/
 LOCAL_C_INCLUDES += $(SBT_MANAGED_JNI_INCLUDE)
 
 # Add source files
-LOCAL_SRC_FILES := functions.c
+LOCAL_SRC_FILES := functions.cpp
 
 # Add static libraries
 LOCAL_STATIC_LIBRARIES := aubio
