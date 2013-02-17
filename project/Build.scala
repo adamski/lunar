@@ -13,9 +13,15 @@ object General {
     platformName in Android := "android-16"
   )
 
-  val proguardSettings = Seq (
-    useProguard in Android := true,
-    proguardOptimizations in Android ++= Seq(
+  lazy val inputSettings = inConfig(Android) (Seq (
+    mainResPath <<= (baseDirectory, resDirectoryName) (_ / _) map (x=>x),
+    mainAssetsPath <<= (baseDirectory, assetsDirectoryName) (_ / _),
+    manifestPath <<= (baseDirectory, manifestName) map ((s,m) => Seq(s / m)) map (x=>x)
+  ))
+
+  lazy val proguardSettings = inConfig(Android) (Seq (
+    useProguard := true,
+    proguardOptimizations ++= Seq(
       """-keep class com.github.fxthomas.lunar.** {
            void set*(***);
            *** get*();
@@ -23,12 +29,12 @@ object General {
       "-keepattributes EnclosingMethod",
       "-keep class scala.collection.SeqLike { public protected *; }"
     )
-  )
+  ))
 
-  val ndkSettings = Seq(
-    jniClasses in Android += "com.github.fxthomas.lunar.Song$",
-    javahOutputFile in Android := Some(new File("native.h"))
-  )
+  lazy val ndkSettings = inConfig(Android) (Seq(
+    jniClasses += "com.github.fxthomas.lunar.Song$",
+    javahOutputFile := Some(new File("native.h"))
+  ))
 
   lazy val fullAndroidSettings =
     General.settings ++
@@ -41,7 +47,8 @@ object General {
     AndroidMarketPublish.settings ++ Seq (
       keyalias in Android := "change-me",
       libraryDependencies += "org.scalatest" % "scalatest_2.10.0-RC3" % "1.8-B1" % "test"
-    )
+    ) ++
+    inputSettings
 }
 
 object AndroidBuild extends Build {

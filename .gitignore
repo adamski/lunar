@@ -5,4 +5,6 @@ project/project/
 src/main/native/
 src/main/obj/
 src/main/libs/
-libs/*/
+libs/
+native/
+obj/

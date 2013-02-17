@@ -20,7 +20,7 @@ export SYS_ROOT="$ANDROID_NDK/platforms/android-$TARGET_NDK_VERSION/arch-$TARGET
 # Where to install the cross-compiled packages?
 # When running `make install`, all the files (executables, libraries,
 # documentation,...) will be in this directory.
-export INSTALL_DIR="$(pwd)/../src/main/native"
+export INSTALL_DIR="$(pwd)/../native"
 
 # Executable names for the compilation toolchain
 export CC="$TARGET_TOOLCHAIN-gcc --sysroot=$SYS_ROOT"
