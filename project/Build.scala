@@ -3,6 +3,7 @@ import sbt._
 import Keys._
 import AndroidKeys._
 import AndroidNdkKeys._
+import com.typesafe.sbteclipse.plugin.EclipsePlugin.{EclipseKeys,EclipseCreateSrc}
 
 object General {
   val settings = Defaults.defaultSettings ++ Seq (
@@ -49,13 +50,20 @@ object General {
       libraryDependencies += "org.scalatest" % "scalatest_2.10.0-RC3" % "1.8-B1" % "test"
     ) ++
     inputSettings
+
+    lazy val eclipseSettings = Seq(
+      EclipseKeys.createSrc :=
+        EclipseCreateSrc.Default +
+        EclipseCreateSrc.Managed,
+      EclipseKeys.eclipseOutput := Some("bin/classes")
+    )
 }
 
 object AndroidBuild extends Build {
   lazy val main = Project (
     "Lunar",
     file("."),
-    settings = General.fullAndroidSettings
+    settings = General.fullAndroidSettings ++ General.eclipseSettings
   )
 
   lazy val tests = Project (
