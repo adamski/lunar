@@ -9,7 +9,7 @@ object General {
     name := "Lunar",
     version := "0.1",
     versionCode := 0,
-    scalaVersion := "2.10.0-RC3",
+    scalaVersion := "2.10.0",
     platformName in Android := "android-16"
   )
 
