@@ -99,10 +99,11 @@ case class Song(
 
 object Song {
   // Load audioproc library
-  System.loadLibrary("audioproc")
+  // System.loadLibrary("audioproc")
 
   // Native methods
-  @native def computeBPM (data: Array[Byte])
+  // @native def computeBPM (data: Array[Byte])
+  def computeBPM(data: Array[Byte]) = {}
 
   def cursorToStream (cursor: Cursor) = {
     // Convert the list of columns into a dictionary (name => index)
