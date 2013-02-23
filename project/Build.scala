@@ -37,7 +37,6 @@ object General {
     TypedResources.settings ++
     proguardSettings ++
     ndkSettings ++
-    AndroidEclipse.settings ++
     AndroidManifestGenerator.settings ++
     AndroidMarketPublish.settings ++ Seq (
       keyalias in Android := "change-me",
@@ -49,13 +48,14 @@ object AndroidBuild extends Build {
   lazy val main = Project (
     "Lunar",
     file("."),
-    settings = General.fullAndroidSettings
+    settings = General.fullAndroidSettings ++ AndroidEclipse.settings
   )
 
   lazy val tests = Project (
     "tests",
     file("tests"),
     settings = General.settings ++
+               AndroidEclipse.settings ++
                AndroidTest.androidSettings ++
                General.proguardSettings ++ Seq (
       name := "LunarTests"

@@ -140,7 +140,7 @@ object AndroidEclipse {
     mainAssetsPath in Android <<=
       (baseDirectory, assetsDirectoryName in Android) (_ / _),
     manifestPath in Android <<=
-      (baseDirectory, manifestName in Android) map ((s,m) => Seq(s / m)) map (x=>x),
+      (baseDirectory, manifestName in Android) map ((b,m) => Seq(b / m)) map (x=>x),
 
     // Set some options inside the project
     projectTransformerFactories := Seq(
