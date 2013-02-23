@@ -18,7 +18,7 @@ import scala.xml.{Node,Elem,UnprefixedAttribute,Text,Null}
 import scala.xml.transform.RewriteRule
 
 // Some settings for sbteclipse with sbt-android-plugin and
-// AndroidProguardScala
+// AndroidProguardScala.
 object AndroidEclipse {
 
   // Represents the transformation type
@@ -65,8 +65,12 @@ object AndroidEclipse {
     mode: TransformType, // Should we append, prepend or replace?
     objs: Seq[T]         // Objects to append/prepend/replace
   ) extends EclipseTransformerFactory[RewriteRule] {
+
+    // We need Scalaz to use Validation
     import scalaz.Scalaz._
 
+    // Rewrite rule that either prepends, replaces or appends children to any
+    // parent element having the tag `elem`.
     object Rule extends RewriteRule {
       override def transform(node: Node): Seq[Node] = node match {
         // Check if this is the right parent element
@@ -96,9 +100,19 @@ object AndroidEclipse {
     }
   }
 
+  // This fixes the output directory.
+  //
+  // SBTEclipse adds a target output directory to each classpath entry inside
+  // the .classpath file, but this doesn't play nice with the Android plugin.
+  //
+  // This Transformer will :
+  //   * Remove output="..." from each classpathentry
+  //   * Set output="defaultOutput" to the default entry
   class ClasspathOutputFixer (
-    defaultOutput: String
+    defaultOutput: String    // Default output directory
   ) extends EclipseTransformerFactory[RewriteRule] {
+
+    // We need Scalaz
     import scalaz.Scalaz._
 
     object Rule extends RewriteRule {
@@ -124,15 +138,26 @@ object AndroidEclipse {
     }
   }
 
-  // Set default settings
-  lazy val settings = Seq(
+  // Output settings that play well with Eclipse and ADT :
+  //   * Add managed sources to the Eclipse classpath
+  //   * Fix Eclipse output
+  //   * Put the resources, manifest and assets to the root dir
+  lazy val outputSettings = Seq(
     // We want managed sources in addition to the default settings
     createSrc :=
       EclipseCreateSrc.Default +
       EclipseCreateSrc.Managed,
 
-    // ADT requires the output to be inside bin/classes
-    //eclipseOutput := Some("bin/classes"),
+    // Initialize Eclipse Output to None (output will default to bin/classes)
+    eclipseOutput := None,
+
+    // Fix output directories
+    classpathTransformerFactories <+= (eclipseOutput) {
+      d => d match {
+        case Some(s) => new ClasspathOutputFixer(s)
+        case None => new ClasspathOutputFixer("bin/classes")
+      }
+    },
 
     // Resources, assets and manifest must be at the project root directory
     mainResPath in Android <<=
@@ -140,10 +165,12 @@ object AndroidEclipse {
     mainAssetsPath in Android <<=
       (baseDirectory, assetsDirectoryName in Android) (_ / _),
     manifestPath in Android <<=
-      (baseDirectory, manifestName in Android) map ((b,m) => Seq(b / m)) map (x=>x),
+      (baseDirectory, manifestName in Android) map ((b,m) => Seq(b / m)) map (x=>x)
+  )
 
+  lazy val naturesSettings = Seq(
     // Set some options inside the project
-    projectTransformerFactories := Seq(
+    projectTransformerFactories ++= Seq(
       // Add Android and AndroidProguardScala natures
       new Transformer[Nature]("natures", Append, Seq(
         "com.android.ide.eclipse.adt.AndroidNature",
@@ -163,12 +190,17 @@ object AndroidEclipse {
       ))
     ),
 
-    // Set some additional clasaspath options
-    classpathTransformerFactories := Seq(
+    // Add the Android lib/ folder to the classpath
+    classpathTransformerFactories ++= Seq(
       new Transformer[ClasspathContainer]("classpath", Append, Seq(
         "com.android.ide.eclipse.adt.LIBRARIES"
-      )),
-      new ClasspathOutputFixer("bin/classes")
+      ))
     )
   )
+
+  // Set default settings
+  lazy val settings = Seq (
+    classpathTransformerFactories := Seq(),
+    projectTransformerFactories := Seq()
+  ) ++ outputSettings ++ naturesSettings
 }
