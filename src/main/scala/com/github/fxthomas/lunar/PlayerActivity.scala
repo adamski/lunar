@@ -20,12 +20,16 @@ with TypedActivity
 with PlayerService.PlayerListener
 with WheelView.Listener {
 
-  private var wheelShown = false
+  def findFragmentById[T](id: Int) =
+    getFragmentManager.findFragmentById(id).asInstanceOf[T]
+  
+  private lazy val songInfo =
+    findFragmentById[SongInfoFragment](R.id.fragment_songinfo)
 
   private class ProgressUpdateHandler extends Handler {
     override def handleMessage (msg: Message) {
       for (p <- playerService) if (p.isPlaying) {
-        findView (TR.album_view).setProgress (p.currentProgress)
+        songInfo.setProgress (p.currentProgress)
         sendMessageDelayed (Message.obtain, 500)
       }
     }
@@ -35,16 +39,16 @@ with WheelView.Listener {
   def onSliceClick (i: Int) = {
     for (p <- playerService) {
       p.setCurrentMood(i)
-      findView(TR.wheel_view).setSelectedSlice(i)
+      songInfo.setSelectedSlice(i)
     }
   }
 
   override def onStopPlayer = {
-    findView(TR.album_view).setProgress(0f)
+    songInfo.setProgress(0f)
   }
 
   override def onPausePlayer (service: PlayerService) = {
-    findView (TR.album_view).setProgress(service.currentProgress)
+    songInfo.setProgress(service.currentProgress)
     findView (TR.btn_pause).setImageResource (R.drawable.play)
   }
 
@@ -55,16 +59,9 @@ with WheelView.Listener {
 
   override def onStartPlayer (service: PlayerService, song: Song) = {
     findView (TR.btn_pause).setImageResource (R.drawable.pause)
-    findView (TR.album_view).setProgress(0f)
-    findView(TR.album_view).setImageDrawable(song.album.getCover(this)
-      .map(b => new BitmapDrawable(b))
-      .getOrElse(null))
-
+    songInfo.setProgress(0f)
+    songInfo.setSong(song)
     progressUpdateHandler.sendMessage (Message.obtain)
-
-    findView (TR.song_title).setText (song.title)
-    findView (TR.artist_name).setText (song.artist.name)
-    findView (TR.album_title).setText (song.album.title)
   }
 
   private var playerService: Option[PlayerService] = None
@@ -75,7 +72,7 @@ with WheelView.Listener {
 
       // And configure it
       for (p <- playerService) {
-        findView (TR.wheel_view).setSelectedSlice(p.currentMood)
+        songInfo.setSelectedSlice(p.currentMood)
         p.setListener(PlayerActivity.this)
         p.currentSong.foreach (s => onStartPlayer (p, s))
       }
@@ -95,7 +92,7 @@ with WheelView.Listener {
   override def onCreate(bundle: Bundle) {
     Log.i ("PlayerActivity", "Creating activity...")
     super.onCreate(bundle)
-    setContentView(R.layout.main)
+    setContentView(R.layout.activity_player)
     setVolumeControlStream(AudioManager.STREAM_MUSIC)
 
     findView(TR.btn_pause).setOnClickListener(new View.OnClickListener {
@@ -110,38 +107,17 @@ with WheelView.Listener {
        def onClick(b: View) = star
     })
 
-    findView(TR.album_view).setOnClickListener(new View.OnClickListener {
-      def onClick(b: View) = showWheel
-    })
-
-    findView(TR.wheel_view).setVisibility(View.GONE)
-    findView(TR.wheel_view).setListener(this)
-
     connectService
   }
 
-  def showWheel = {
-    if (!wheelShown) {
-      findView(TR.wheel_view).animateOn
-      wheelShown = true
-    }
-  }
-
-  def hideWheel = {
-    if (wheelShown) {
-      findView(TR.wheel_view).animateOff
-      wheelShown = false
-    }
-  }
+  def showWheel = songInfo.showWheel
+  def hideWheel = songInfo.hideWheel
 
   override def onBackPressed = {
-    if (wheelShown) hideWheel
-    else {
-      for (p <- playerService) if (p.isPlaying)
-        stopService (new Intent(
-          getApplicationContext, classOf[PlayerService]))
-      super.onBackPressed
-    }
+    for (p <- playerService) if (p.isPlaying)
+      stopService (new Intent(
+        getApplicationContext, classOf[PlayerService]))
+    super.onBackPressed
   }
 
   def connectService = {

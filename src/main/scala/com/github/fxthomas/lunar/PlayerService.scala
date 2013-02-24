@@ -85,8 +85,8 @@ with Visualizer.OnDataCaptureListener {
   // Visualizer output
   def onFftDataCapture(v: Visualizer, fft: Array[Byte], samplingRate: Int) = {}
   def onWaveFormDataCapture(v: Visualizer, waveform: Array[Byte], samplingRate: Int) = {
-    Log.i ("Aubio", s"Sending data to native, sampling rate is $samplingRate")
-    Song.computeBPM (waveform)
+    //Log.i ("Aubio", s"Sending data to native, sampling rate is $samplingRate")
+    //Song.computeBPM (waveform)
   }
 
   /*************************
