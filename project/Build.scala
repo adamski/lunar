@@ -40,7 +40,7 @@ object General {
     AndroidManifestGenerator.settings ++
     AndroidMarketPublish.settings ++ Seq (
       keyalias in Android := "change-me",
-      libraryDependencies += "org.scalatest" % "scalatest_2.10.0-RC3" % "1.8-B1" % "test"
+      libraryDependencies += "org.scalatest" %% "scalatest" % "1.9" % "test"
     )
 }
 
@@ -48,14 +48,14 @@ object AndroidBuild extends Build {
   lazy val main = Project (
     "Lunar",
     file("."),
-    settings = General.fullAndroidSettings ++ AndroidEclipse.settings
+    settings = General.fullAndroidSettings ++ AndroidEclipseDefaults.settings
   )
 
   lazy val tests = Project (
     "tests",
     file("tests"),
     settings = General.settings ++
-               AndroidEclipse.settings ++
+               AndroidEclipseDefaults.settings ++
                AndroidTest.androidSettings ++
                General.proguardSettings ++ Seq (
       name := "LunarTests"
