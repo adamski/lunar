@@ -7,7 +7,7 @@ import AndroidKeys._
 
 // Import Eclipse plugin
 import com.typesafe.sbteclipse.plugin._
-import EclipsePlugin.{ EclipseKeys, EclipseCreateSrc }
+import EclipsePlugin.{ EclipseKeys, EclipseCreateSrc, EclipseExecutionEnvironment }
 import EclipseKeys._
 
 // Import Scala XML
@@ -31,6 +31,9 @@ object AndroidEclipseDefaults {
     createSrc :=
       EclipseCreateSrc.Default +
       EclipseCreateSrc.Managed,
+
+    // Environment to Java 1.6 (1.7 not supported by Android at the moment)
+    executionEnvironment := Some(EclipseExecutionEnvironment.JavaSE16),
 
     // Initialize Eclipse Output to None (output will default to bin/classes)
     eclipseOutput := None,
@@ -82,7 +85,18 @@ object AndroidEclipseDefaults {
       new Transformer[ClasspathContainer]("classpath", TransformType.Append, Seq(
         "com.android.ide.eclipse.adt.LIBRARIES"
       ))
-    )
+    ),
+
+    // Remove R.java from the managed sources
+    //  (clashes with the Eclipse-generated R.java)
+    classpathTransformerFactories <++=
+      (managedSourceDirectories in Compile) {
+        m => m map {
+          path => new ClasspathExclusion(
+            "src", path, Seq("**/R.java")
+          )
+        }
+      }
   )
 
   // Set default settings

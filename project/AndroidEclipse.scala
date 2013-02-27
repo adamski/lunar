@@ -136,4 +136,44 @@ object AndroidEclipse {
       Rule.success
     }
   }
+
+  // This excludes a list of files from a matching classpath entry
+  class ClasspathExclusion (
+    kind: String,    // Kind of classpath entry
+    path: File,
+    exclude: Seq[String]
+  ) extends EclipseTransformerFactory[RewriteRule] {
+
+    // We need Scalaz
+    import scalaz.Scalaz._
+
+    // Get node attributes
+    def nodePath(node: Node) = new File((node \ "@path").text)
+    def nodeKind(node: Node) = (node \ "@kind").text
+
+    object Rule extends RewriteRule {
+      override def transform(node: Node): Seq[Node] = node match {
+        // Find classpath entries with selected kind and path
+        case Elem(_, "classpathentry", _, _, _*)
+          if nodeKind(node) == kind &&
+             nodePath(node).getCanonicalPath == path.getCanonicalPath => {
+
+          // Append existing excludes
+          val all_excl = (exclude :+ (node \ "@excluding").text).filter (_ != "")
+          val attr = new UnprefixedAttribute("excluding", Text(all_excl.mkString("|")), Null)
+
+          // Set the new attribute
+          (node.asInstanceOf[Elem] % attr)
+        }
+
+        case other => other
+      }
+    }
+
+    override def createTransformer(
+      ref: ProjectRef,
+      state: State): Validation[RewriteRule] = {
+      Rule.success
+    }
+  }
 }
